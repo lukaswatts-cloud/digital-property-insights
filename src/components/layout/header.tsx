@@ -27,9 +27,10 @@ export default function Header() {
     );
 
     const Wrapper = isMobile ? SheetClose : 'div';
+    const wrapperProps = isMobile ? { asChild: true } : {};
 
     return (
-      <Wrapper asChild>
+      <Wrapper {...wrapperProps}>
         <Link href={href} className={linkClasses}>
           {label}
         </Link>
