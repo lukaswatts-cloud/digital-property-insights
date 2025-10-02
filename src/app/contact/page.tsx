@@ -1,5 +1,5 @@
 import { ContactForm } from '@/components/contact-form';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -24,23 +24,12 @@ export default function ContactPage() {
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
                   <div className="flex-shrink-0 bg-primary text-primary-foreground p-3 rounded-md">
-                    <Phone className="h-6 w-6" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Phone</h3>
-                    <a href="tel:+11234567890" className="text-muted-foreground hover:text-primary transition-colors">
-                      +1 (123) 456-7890
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="flex-shrink-0 bg-primary text-primary-foreground p-3 rounded-md">
                     <Mail className="h-6 w-6" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                     <a href="mailto:hello@dpi.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      hello@digitalproperty.insights
+                     <a href="mailto:info@digitalpropertyinsights.com.au" className="text-muted-foreground hover:text-primary transition-colors">
+                      info@digitalpropertyinsights.com.au
                     </a>
                   </div>
                 </div>
@@ -49,10 +38,10 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6" />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Office</h3>
+                    <h3 className="font-semibold">Address</h3>
                     <p className="text-muted-foreground">
-                      123 Tech Avenue, Suite 100<br />
-                      Innovation City, 12345
+                      PO Box 70<br />
+                      Tyabb, 3913. Victoria. Australia
                     </p>
                   </div>
                 </div>
