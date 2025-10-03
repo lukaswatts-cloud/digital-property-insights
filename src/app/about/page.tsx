@@ -7,26 +7,19 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const storyImage = PlaceHolderImages.find(img => img.id === 'about-us-story');
 const teamMember1 = PlaceHolderImages.find(img => img.id === 'team-member-1');
 const teamMember2 = PlaceHolderImages.find(img => img.id === 'team-member-2');
-const teamMember3 = PlaceHolderImages.find(img => img.id === 'team-member-3');
 
 const team = [
   {
-    name: "Alex Johnson",
-    title: "Founder & CEO",
+    name: "Lukas Watts",
+    title: "Founder & Managing Partner",
     avatar: teamMember1,
-    fallback: "AJ",
+    fallback: "LW",
   },
   {
-    name: "Maria Garcia",
-    title: "Head of Engineering",
+    name: "Jill Watts",
+    title: "Founder & Managing Partner",
     avatar: teamMember2,
-    fallback: "MG",
-  },
-  {
-    name: "David Chen",
-    title: "Lead Data Scientist",
-    avatar: teamMember3,
-    fallback: "DC",
+    fallback: "JW",
   },
 ];
 
@@ -104,7 +97,7 @@ export default function AboutPage() {
               The brilliant minds behind our innovative technology.
             </p>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
             {team.map((member) => (
               <Card key={member.name} className="text-center">
                 <CardContent className="pt-6">

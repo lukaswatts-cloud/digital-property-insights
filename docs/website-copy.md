@@ -159,12 +159,10 @@ This document contains all the text content from the website for proofreading an
 ### **Meet the Team Section**
 - **Title:** Meet the Team
 - **Subtitle:** The brilliant minds behind our innovative technology.
-- **Team Member 1 Name:** Alex Johnson
-- **Team Member 1 Title:** Founder & CEO
-- **Team Member 2 Name:** Maria Garcia
-- **Team Member 2 Title:** Head of Engineering
-- **Team Member 3 Name:** David Chen
-- **Team Member 3 Title:** Lead Data Scientist
+- **Team Member 1 Name:** Lukas Watts
+- **Team Member 1 Title:** Founder & Managing Partner
+- **Team Member 2 Name:** Jill Watts
+- **Team Member 2 Title:** Founder & Managing Partner
 
 ### **Core Values Section**
 - **Title:** Our Core Values
