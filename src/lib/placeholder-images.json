@@ -20,21 +20,15 @@
     },
     {
       "id": "team-member-1",
-      "description": "Portrait of a team member.",
-      "imageUrl": "https://images.unsplash.com/photo-1635131902146-6957477a4ff4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxwZXJzb24lMjBzbWlsaW5nfGVufDB8fHx8MTc1OTMyNDQ0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person smiling"
+      "description": "Abstract professional image.",
+      "imageUrl": "https://images.unsplash.com/photo-1557683311-e8651a59452b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1080&q=80",
+      "imageHint": "abstract professional"
     },
     {
       "id": "team-member-2",
       "description": "Portrait of a team member.",
       "imageUrl": "https://images.unsplash.com/photo-1527752002957-af97f18a0c81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwcm9mZXNzaW9uYWx8ZW58MHx8fHwxNzU5MzM5ODM1fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "person professional"
-    },
-    {
-      "id": "team-member-3",
-      "description": "Portrait of a team member.",
-      "imageUrl": "https://images.unsplash.com/photo-1486565419911-89bd9b698ad6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBsb29raW5nfGVufDB8fHx8MTc1OTM1NDgyMnww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "person looking"
     },
     {
       "id": "about-us-story",
