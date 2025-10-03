@@ -47,7 +47,7 @@ export default function AboutPage() {
           <div>
             <h2 className="text-3xl font-bold tracking-tight">Our Story</h2>
             <p className="mt-4 text-muted-foreground">
-              Founded in 2020, Digital Property Insights was born from a simple observation: the real estate industry was ripe for disruption. Decisions worth millions were being made with outdated tools and incomplete data.
+              Founded in 2025, Digital Property Insights was born from a simple observation: the real estate industry was ripe for disruption. Decisions worth millions were being made with outdated tools and incomplete data.
             </p>
             <p className="mt-4 text-muted-foreground">
               We assembled a team dedicated to solving this problem by leveraging the power of artificial intelligence and big data. Our goal is to empower everyone—from individual homeowners to large investment firms—with the insights they need to navigate the complexities of the property market with confidence.

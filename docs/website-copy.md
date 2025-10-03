@@ -147,7 +147,7 @@ This document contains all the text content from the website for proofreading an
 
 ### **Our Story Section**
 - **Title:** Our Story
-- **Paragraph 1:** Founded in 2020, Digital Property Insights was born from a simple observation: the real estate industry was ripe for disruption. Decisions worth millions were being made with outdated tools and incomplete data.
+- **Paragraph 1:** Founded in 2025, Digital Property Insights was born from a simple observation: the real estate industry was ripe for disruption. Decisions worth millions were being made with outdated tools and incomplete data.
 - **Paragraph 2:** We assembled a team dedicated to solving this problem by leveraging the power of artificial intelligence and big data. Our goal is to empower everyone—from individual homeowners to large investment firms—with the insights they need to navigate the complexities of the property market with confidence.
 
 ### **Mission & Vision Section**
