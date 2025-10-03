@@ -5,7 +5,7 @@ import { CheckCircle, Lightbulb, Target, Handshake } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const storyImage = PlaceHolderImages.find(img => img.id === 'about-us-story');
-const teamMember1 = PlaceHolderImages.find(img => img.id === 'team-member-3');
+const teamMember1 = PlaceHolderImages.find(img => img.id === 'team-member-1');
 const teamMember2 = PlaceHolderImages.find(img => img.id === 'team-member-2');
 
 const team = [
