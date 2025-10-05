@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/Logo.png" alt="Digital Property Insights Logo" width={32} height={32} />
+              <Image src="https://i.ibb.co/GtnDW0v/Logo.png" alt="Digital Property Insights Logo" width={32} height={32} />
               <span className="text-lg font-bold">Digital Property Insights</span>
             </Link>
             <p className="text-sm text-muted-foreground">
