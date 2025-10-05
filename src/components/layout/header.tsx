@@ -45,7 +45,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2 bg-transparent">
+        <Link href="/" className="mr-6 flex items-center space-x-2 focus:outline-none">
           {logo && <Image src={logo.imageUrl} alt={logo.description} width={40} height={40} />}
           <span className="hidden font-bold sm:inline-block">
             Digital Property Insights
@@ -74,7 +74,7 @@ export default function Header() {
               <SheetContent side="right" className="w-[240px]">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between border-b pb-4">
-                     <Link href="/" className="flex items-center space-x-2 bg-transparent">
+                     <Link href="/" className="flex items-center space-x-2 focus:outline-none">
                         {logo && <Image src={logo.imageUrl} alt={logo.description} width={32} height={32} />}
                         <span className="font-bold">DPI</span>
                      </Link>

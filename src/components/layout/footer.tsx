@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="container py-12">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
-            <Link href="/" className="flex items-center space-x-2 bg-transparent">
+            <Link href="/" className="flex items-center space-x-2 focus:outline-none">
               {logo && <Image src={logo.imageUrl} alt={logo.description} width={32} height={32} />}
               <span className="text-lg font-bold">Digital Property Insights</span>
             </Link>
