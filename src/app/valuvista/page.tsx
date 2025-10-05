@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, GaugeCircle, AreaChart, Search, ArrowRight } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SiteImages } from '@/lib/site-images';
 
-const valuvistaMockup = PlaceHolderImages.find(img => img.id === 'valuvista-mockup');
+const valuvistaMockup = SiteImages.find(img => img.id === 'valuvista-mockup');
 
 const features = [
   {

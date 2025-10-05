@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { FileText, ClipboardCheck, BarChart, ArrowRight, User, HardHat, Home } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SiteImages } from '@/lib/site-images';
 
-const renoScopeMockup = PlaceHolderImages.find(img => img.id === 'renoscope-mockup');
+const renoScopeMockup = SiteImages.find(img => img.id === 'renoscope-mockup');
 
 const howItWorksSteps = [
   {

@@ -12,9 +12,9 @@ import {
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SiteImages } from '@/lib/site-images';
 
-const heroImage = PlaceHolderImages.find(img => img.id === 'hero-image');
+const heroImage = SiteImages.find(img => img.id === 'hero-image');
 
 const featureCards = [
   {

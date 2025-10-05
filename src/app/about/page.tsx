@@ -2,11 +2,11 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { CheckCircle, Lightbulb, Target, Handshake } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SiteImages } from '@/lib/site-images';
 
-const storyImage = PlaceHolderImages.find(img => img.id === 'about-us-story');
-const teamMember1 = PlaceHolderImages.find(img => img.id === 'team-member-1');
-const teamMember2 = PlaceHolderImages.find(img => img.id === 'team-member-2');
+const storyImage = SiteImages.find(img => img.id === 'about-us-story');
+const teamMember1 = SiteImages.find(img => img.id === 'team-member-1');
+const teamMember2 = SiteImages.find(img => img.id === 'team-member-2');
 
 const team = [
   {

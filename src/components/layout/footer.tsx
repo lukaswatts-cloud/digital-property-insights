@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SiteImages } from '@/lib/site-images';
 
-const logo = PlaceHolderImages.find(img => img.id === 'company-logo');
+const logo = SiteImages.find(img => img.id === 'company-logo');
 
 export default function Footer() {
   return (

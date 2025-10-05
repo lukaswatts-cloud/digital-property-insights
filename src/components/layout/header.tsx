@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { SiteImages } from '@/lib/site-images';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -17,7 +17,7 @@ const navLinks = [
   { href: '/contact', label: 'Contact Us' },
 ];
 
-const logo = PlaceHolderImages.find(img => img.id === 'company-logo');
+const logo = SiteImages.find(img => img.id === 'company-logo');
 
 export default function Header() {
   const pathname = usePathname();
