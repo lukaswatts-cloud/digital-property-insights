@@ -6,7 +6,8 @@ runConfig:
   # more instances in response to increased traffic.
   maxInstances: 1
 
-# Pass secrets from Cloud Secret Manager to your app as environment variables.
-secretEnv:
-  - secret: GEMINI_API_KEY
-    env: GEMINI_API_KEY
+# Pass environment variables to your app.
+# IMPORTANT: Do not store secrets in this file.
+# Use the Firebase console to set the value for GEMINI_API_KEY.
+env:
+  - variable: GEMINI_API_KEY
