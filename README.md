@@ -2,42 +2,38 @@
 
 This is a Next.js project built with Firebase Studio.
 
-## Publishing to a Custom Domain
+## Publishing to a Custom Domain & Deploying Your Website
 
-Your application is hosted using Firebase App Hosting. To connect your custom domain (e.g., `digitalpropertyinsights.com.au`), you need to follow these steps in your Firebase project console.
+Your application is hosted using Firebase App Hosting. For your changes to be visible on your live domain (`digitalpropertyinsights.com.au`), you need to connect your Firebase project to a GitHub repository and deploy your code.
 
-### Step-by-Step Instructions:
+### Step-by-Step Deployment Instructions:
 
-1.  **Open your Firebase Project:**
-    *   Go to the [Firebase Console](https://console.firebase.google.com/).
-    *   Select the project that is associated with this application.
+1.  **Create a GitHub Repository:**
+    *   Go to [GitHub](https://github.com) and create a new, empty repository for this project. You do not need to initialize it with a README or any other files.
 
-2.  **Navigate to App Hosting:**
-    *   In the left-hand navigation menu, under the **Build** section, click on **App Hosting**.
+2.  **Connect Firebase to GitHub:**
+    *   Open your [Firebase Console](https://console.firebase.google.com/) and navigate to your project.
+    *   In the left-hand menu, under **Build**, click on **App Hosting**.
+    *   Click the **Manage** button next to your backend (named "backend").
+    *   Go to the **Settings** tab.
+    *   Under the "Deployment" section, click the **"Connect to GitHub"** button.
 
-3.  **Go to Domain Management:**
-    *   You will see your App Hosting backend listed. Click the **Manage** button next to it.
-    *   In the dashboard that appears, click on the **"Custom domains"** tab.
+3.  **Authorize and Select Repository:**
+    *   Follow the on-screen prompts to authorize Firebase to access your GitHub account.
+    *   Once authorized, select the new GitHub repository you created in Step 1.
+    *   For the **"Live branch (for rollouts)"**, choose your primary branch (e.g., `main`).
+    *   Leave the **"App root directory"** as `/`.
+    *   Click **"Save and deploy"**.
 
-4.  **Add Your Domain:**
-    *   Click the **"Add custom domain"** button.
-    *   Enter your domain name: `digitalpropertyinsights.com.au`.
-    *   It's recommended to also add a redirect for the `www` version (`www.digitalpropertyinsights.com.au`) to your primary domain. You can do this in the same flow.
+4.  **Push Your Code from Firebase Studio to GitHub:**
+    *   Back in Firebase Studio, you will need to connect your workspace to the newly linked GitHub repository.
+    *   Once connected, push the latest version of your code from Studio to the `main` branch of your repository.
 
-5.  **Verify Domain Ownership:**
-    *   Firebase will provide you with a **TXT record** (or sometimes other methods like CNAME).
-    *   You need to copy this record and add it to the DNS settings of your domain registrar (the service where you bought `digitalpropertyinsights.com.au`).
-    *   This step is crucial as it proves to Firebase that you own the domain.
+5.  **Automatic Deployment:**
+    *   Pushing your code to the `main` branch will automatically trigger a new rollout in Firebase App Hosting.
+    *   You can monitor the progress in the **"Rollouts"** tab in the App Hosting section of the Firebase console.
 
-6.  **Point Your Domain to Firebase:**
-    *   After verification is complete (which can take some time), Firebase will provide you with **A records** (and possibly AAAA records).
-    *   Go back to your domain registrar's DNS settings and add these A records. These records point your domain name to the Firebase servers that host your application.
+6.  **Verify Your Live Site:**
+    *   Once the rollout is complete, your changes will be live on your custom domain. You may need to do a "hard refresh" (Ctrl+Shift+R or Cmd+Shift+R) to see the latest updates.
 
-7.  **Wait for Propagation:**
-    *   DNS changes can take anywhere from a few minutes to 48 hours to propagate across the internet. Once propagated, your website will be live at `digitalpropertyinsights.com.au`.
-
-### A Note on Deployments
-
-Firebase App Hosting automatically deploys the latest version of your code. If you visit your live domain and don't see the latest changes, it might be due to a short delay in the deployment process or web caching. You can check the "Rollouts" tab in the App Hosting section of the Firebase console to see the status of your deployments.
-
-By following these steps, you will successfully connect your custom domain and publish your website.
+By following these steps, you will establish a continuous deployment pipeline. From now on, every time you push new code to your `main` branch, it will automatically be deployed to your live website.
