@@ -11,3 +11,9 @@ runConfig:
 # Use the Firebase console to set the value for GEMINI_API_KEY.
 env:
   - variable: GEMINI_API_KEY
+    availability:
+      - BUILD
+      - RUNTIME
+    secret: GEMINI_API_KEY
+    pinned: true
+    environment: prod
