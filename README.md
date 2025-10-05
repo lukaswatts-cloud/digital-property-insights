@@ -36,4 +36,8 @@ Your application is hosted using Firebase App Hosting. To connect your custom do
 7.  **Wait for Propagation:**
     *   DNS changes can take anywhere from a few minutes to 48 hours to propagate across the internet. Once propagated, your website will be live at `digitalpropertyinsights.com.au`.
 
+### A Note on Deployments
+
+Firebase App Hosting automatically deploys the latest version of your code. If you visit your live domain and don't see the latest changes, it might be due to a short delay in the deployment process or web caching. You can check the "Rollouts" tab in the App Hosting section of the Firebase console to see the status of your deployments.
+
 By following these steps, you will successfully connect your custom domain and publish your website.
