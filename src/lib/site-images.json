@@ -38,9 +38,9 @@
     },
     {
       "id": "company-logo",
-      "description": "Abstract logo representing digital insights.",
-      "imageUrl": "https://images.unsplash.com/photo-1581456495146-65a71b2c8e52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhYnN0cmFjdCUyMGxvZ298ZW58MHx8fHwxNzYwMTUxMTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "abstract logo"
+      "description": "Digital Property Insights company logo.",
+      "imageUrl": "https://i.ibb.co/pW3M9g3/DPI-Logo.png",
+      "imageHint": "company logo"
     }
   ]
 }
