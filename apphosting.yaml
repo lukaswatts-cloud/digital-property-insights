@@ -15,5 +15,3 @@ env:
       - BUILD
       - RUNTIME
     secret: GEMINI_API_KEY
-    pinned: true
-    environment: prod
