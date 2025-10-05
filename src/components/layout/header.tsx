@@ -43,7 +43,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="https://storage.googleapis.com/digital-property-insights-assets/DPI%20Logo%20.png" alt="Digital Property Insights Logo" width={40} height={40} />
+          <Image src="https://i.ibb.co/GtnDW0v/Logo.png" alt="Digital Property Insights Logo" width={40} height={40} />
           <span className="hidden font-bold sm:inline-block">
             Digital Property Insights
           </span>
@@ -72,7 +72,7 @@ export default function Header() {
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between border-b pb-4">
                      <Link href="/" className="flex items-center space-x-2">
-                        <Image src="https://storage.googleapis.com/digital-property-insights-assets/DPI%20Logo%20.png" alt="Digital Property Insights Logo" width={32} height={32} />
+                        <Image src="https://i.ibb.co/GtnDW0v/Logo.png" alt="Digital Property Insights Logo" width={32} height={32} />
                         <span className="font-bold">DPI</span>
                      </Link>
                      <SheetClose asChild>
