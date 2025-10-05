@@ -9,31 +9,31 @@ Your application is hosted using Firebase App Hosting. For your changes to be vi
 ### Step-by-Step Deployment Instructions:
 
 1.  **Create a GitHub Repository:**
-    *   Go to [GitHub](https://github.com) and create a new, empty repository for this project. You do not need to initialize it with a README or any other files.
+    *   Go to [GitHub](https://github.com) and create a new, **empty** repository. You can name it `digital-property-insights`.
+    *   Do **not** initialize it with a README, license, or any other files.
 
-2.  **Connect Firebase to GitHub:**
+2.  **Push Your Code from Firebase Studio to GitHub:**
+    *   In your Firebase Studio workspace, use the source control features to connect to the new GitHub repository you just created.
+    *   Commit all your project files.
+    *   Push the committed files to a new branch named `main`. This action will create the `main` branch in your GitHub repository and upload your project code.
+
+3.  **Connect Firebase to GitHub:**
     *   Open your [Firebase Console](https://console.firebase.google.com/) and navigate to your project.
     *   In the left-hand menu, under **Build**, click on **App Hosting**.
     *   Click the **Manage** button next to your backend (named "backend").
     *   Go to the **Settings** tab.
     *   Under the "Deployment" section, click the **"Connect to GitHub"** button.
 
-3.  **Authorize and Select Repository:**
+4.  **Authorize and Select Repository:**
     *   Follow the on-screen prompts to authorize Firebase to access your GitHub account.
-    *   Once authorized, select the new GitHub repository you created in Step 1.
-    *   For the **"Live branch (for rollouts)"**, choose your primary branch (e.g., `main`).
+    *   Once authorized, select your `digital-property-insights` repository from the dropdown.
+    *   For the **"Live branch (for rollouts)"**, choose your `main` branch. The error message should now be gone because the branch exists.
     *   Leave the **"App root directory"** as `/`.
     *   Click **"Save and deploy"**.
 
-4.  **Push Your Code from Firebase Studio to GitHub:**
-    *   Back in Firebase Studio, you will need to connect your workspace to the newly linked GitHub repository.
-    *   Once connected, push the latest version of your code from Studio to the `main` branch of your repository.
-
 5.  **Automatic Deployment:**
-    *   Pushing your code to the `main` branch will automatically trigger a new rollout in Firebase App Hosting.
-    *   You can monitor the progress in the **"Rollouts"** tab in the App Hosting section of the Firebase console.
+    *   By completing this setup, you establish a continuous deployment pipeline. From now on, every time you push new code from Firebase Studio to your `main` branch on GitHub, it will automatically trigger a new rollout and be deployed to your live website.
 
 6.  **Verify Your Live Site:**
+    *   You can monitor the progress in the **"Rollouts"** tab in the App Hosting section of the Firebase console.
     *   Once the rollout is complete, your changes will be live on your custom domain. You may need to do a "hard refresh" (Ctrl+Shift+R or Cmd+Shift+R) to see the latest updates.
-
-By following these steps, you will establish a continuous deployment pipeline. From now on, every time you push new code to your `main` branch, it will automatically be deployed to your live website.
