@@ -1,11 +1,14 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, Building2, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+// The logo file was corrupted, so I am removing it for now.
+// import Logo from '/public/logo.png'; 
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -42,7 +45,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Building2 className="h-6 w-6 text-primary" />
+          {/* <Image src={Logo} alt="Digital Property Insights Logo" width={40} height={40} /> */}
+          <div className="w-10 h-10 bg-secondary rounded-full" />
           <span className="hidden font-bold sm:inline-block">
             Digital Property Insights
           </span>
@@ -71,7 +75,8 @@ export default function Header() {
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between border-b pb-4">
                      <Link href="/" className="flex items-center space-x-2">
-                        <Building2 className="h-6 w-6 text-primary" />
+                        {/* <Image src={Logo} alt="Digital Property Insights Logo" width={32} height={32} /> */}
+                        <div className="w-8 h-8 bg-secondary rounded-full" />
                         <span className="font-bold">DPI</span>
                      </Link>
                      <SheetClose asChild>

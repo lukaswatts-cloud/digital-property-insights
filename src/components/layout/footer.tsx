@@ -1,5 +1,8 @@
 import Link from 'next/link';
-import { Building2, Twitter, Linkedin, Facebook } from 'lucide-react';
+import Image from 'next/image';
+import { Twitter, Linkedin, Facebook } from 'lucide-react';
+// The logo file was corrupted, so I am removing it for now.
+// import Logo from '/public/logo.png';
 
 export default function Footer() {
   return (
@@ -8,7 +11,8 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Building2 className="h-6 w-6 text-primary" />
+              {/* <Image src={Logo} alt="Digital Property Insights Logo" width={32} height={32} /> */}
+              <div className="w-8 h-8 bg-muted rounded-full" />
               <span className="text-lg font-bold">Digital Property Insights</span>
             </Link>
             <p className="text-sm text-muted-foreground">
