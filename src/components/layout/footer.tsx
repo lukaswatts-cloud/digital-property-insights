@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Twitter, Linkedin, Facebook } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
+const logo = PlaceHolderImages.find(img => img.id === 'company-logo');
 
 export default function Footer() {
   return (
@@ -9,7 +12,7 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="https://i.ibb.co/GtnDW0v/Logo.png" alt="Digital Property Insights Logo" width={32} height={32} />
+              {logo && <Image src={logo.imageUrl} alt={logo.description} width={32} height={32} data-ai-hint={logo.imageHint} />}
               <span className="text-lg font-bold">Digital Property Insights</span>
             </Link>
             <p className="text-sm text-muted-foreground">

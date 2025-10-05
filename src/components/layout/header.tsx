@@ -7,6 +7,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -15,6 +16,8 @@ const navLinks = [
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact Us' },
 ];
+
+const logo = PlaceHolderImages.find(img => img.id === 'company-logo');
 
 export default function Header() {
   const pathname = usePathname();
@@ -43,7 +46,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="https://i.ibb.co/GtnDW0v/Logo.png" alt="Digital Property Insights Logo" width={40} height={40} />
+          {logo && <Image src={logo.imageUrl} alt={logo.description} width={40} height={40} data-ai-hint={logo.imageHint} />}
           <span className="hidden font-bold sm:inline-block">
             Digital Property Insights
           </span>
@@ -72,7 +75,7 @@ export default function Header() {
                 <div className="flex flex-col h-full">
                   <div className="flex items-center justify-between border-b pb-4">
                      <Link href="/" className="flex items-center space-x-2">
-                        <Image src="https://i.ibb.co/GtnDW0v/Logo.png" alt="Digital Property Insights Logo" width={32} height={32} />
+                        {logo && <Image src={logo.imageUrl} alt={logo.description} width={32} height={32} data-ai-hint={logo.imageHint} />}
                         <span className="font-bold">DPI</span>
                      </Link>
                      <SheetClose asChild>
