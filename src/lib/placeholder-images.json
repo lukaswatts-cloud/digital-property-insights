@@ -1,12 +1,6 @@
 {
   "placeholderImages": [
     {
-      "id": "company-logo",
-      "description": "Digital Property Insights Logo",
-      "imageUrl": "https://i.ibb.co/GtnDW0v/Logo.png",
-      "imageHint": "company logo"
-    },
-    {
       "id": "hero-image",
       "description": "A modern glass building reflecting the sky.",
       "imageUrl": "https://images.unsplash.com/photo-1519662978799-2f05096d3636?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzU5NTY2NjU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
