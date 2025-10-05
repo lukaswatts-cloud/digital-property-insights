@@ -12,7 +12,9 @@ export default function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center space-x-2 focus:outline-none">
-              {logo && <Image src={logo.imageUrl} alt={logo.description} width={32} height={32} />}
+              <div className="relative h-8 w-8">
+                {logo && <Image src={logo.imageUrl} alt={logo.description} fill className="object-contain" />}
+              </div>
               <span className="text-lg font-bold">Digital Property Insights</span>
             </Link>
             <p className="text-sm text-muted-foreground">
