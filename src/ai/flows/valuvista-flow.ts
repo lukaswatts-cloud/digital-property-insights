@@ -12,7 +12,7 @@ const SuburbAnalyticsSchema = z.object({
             "0-19": z.number(),
             "20-39": z.number(),
             "40-59": z.number(),
-            "60+": z'number(),
+            "60+": z.number(),
         }),
     })),
     crime: z.array(z.object({
