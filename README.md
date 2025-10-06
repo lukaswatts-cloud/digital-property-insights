@@ -22,10 +22,11 @@ This guide provides the steps to publish your website to your custom domain (`di
 
 ### **Step 3: Push Your Code from Firebase Studio to GitHub**
 
-1.  Inside your Firebase Studio workspace (from Step 1), find the **Source Control** features. This is often represented by a **branching icon (`Y`)** in a toolbar on the left side of the screen.
-2.  Use the Source Control options to connect to the new, empty GitHub repository you created in Step 2.
-3.  Once connected, **commit** all your project files with a message like "Initial commit."
-4.  Finally, **push** the committed files to a new branch named `main`. This action will create the `main` branch in your GitHub repository and upload all your project code.
+1.  Inside your open Firebase Studio workspace (from Step 1), find the **"View"** menu in the top menu bar.
+2.  From the "View" menu, select **"Source Control"**. This will open the source control panel.
+3.  Use the options in the source control panel to connect to the new, empty GitHub repository you created in Step 2.
+4.  Once connected, **commit** all your project files with a message like "Initial commit."
+5.  Finally, **push** the committed files to a new branch named `main`. This action will create the `main` branch in your GitHub repository and upload all your project code.
 
 ---
 
@@ -35,7 +36,7 @@ This guide provides the steps to publish your website to your custom domain (`di
 2.  In the left-hand menu, under **Build**, click on **App Hosting**.
 3.  Click the **Manage** button next to your backend (named "backend").
 4.  Go to the **Settings** tab.
-5.  Under the "Deployment" section, click the **"Connect to GitHub"** button.
+5.  Under the "Deployment" section, click the **"Connect to GitHub"** button (if you haven't already).
 6.  Authorize Firebase to access your GitHub account and select your `digital-property-insights` repository.
 7.  For the **"Live branch (for rollouts)"**, choose your `main` branch. Because you just pushed your code in Step 3, the `main` branch now exists, and the error message you saw before should be gone.
 8.  Leave the **"App root directory"** as `/`.
