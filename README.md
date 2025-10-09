@@ -44,33 +44,42 @@ Pushing your code to the `main` branch on GitHub automatically starts a new depl
 
 #### **Problem: Deployment Fails with "Misconfigured secret: GEMINI_API_KEY"**
 
-This is the most common first-time setup issue. It means the AI features in your app need a secure API key, but it hasn't been provided to the hosting environment.
+This error means the website's hosting environment is trying to read the `GEMINI_API_KEY` from Google's Secret Manager, but it's failing. This is almost always caused by one of two issues:
 
-**Solution:** You need to create the secret and grant permission one time.
+1.  **The Secret's Value is Missing:** The secret `GEMINI_API_KEY` exists, but it has no active "version" containing the actual API key.
+2.  **The Permission is Missing:** The service account for App Hosting doesn't have permission to access the secret.
+
+**Solution:** Verify both the secret and the permission.
+
+##### **Step 1: Verify the Secret Exists**
 
 1.  **Get an API Key:**
     *   Go to Google AI Studio: [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
-    *   Click "Create API key" and select the `digital-property-insights` project.
+    *   Click "Create API key" and select the **`digital-property-insights`** project.
     *   Copy the generated key.
 
-2.  **Create or Update the Secret:**
-    *   Go to Secret Manager for your project: [https://console.cloud.google.com/security/secret-manager?project=digital-property-insights](https://console.cloud.google.com/security/secret-manager?project=digital-property-insights)
-    *   **If you do not see `GEMINI_API_KEY` in the list:**
-        *   Click **"+ CREATE SECRET"**. Name it `GEMINI_API_KEY` and paste your key in the "Secret value" field. Click **"Create secret"**.
-    *   **If you *do* see `GEMINI_API_KEY` in the list:**
-        *   Click on its name.
-        *   Click **"+ ADD NEW VERSION"** to add your key as the newest, active version.
+2.  **Check Secret Manager:**
+    *   Go to the Secret Manager page for your project: [https://console.cloud.google.com/security/secret-manager?project=digital-property-insights](https://console.cloud.google.com/security/secret-manager?project=digital-property-insights)
+    *   Click on the secret named **`GEMINI_API_KEY`**.
+    *   On the **"Versions"** tab, ensure there is at least one version listed with a status of **"Enabled"**.
+    *   If there are no versions, or none are enabled, click **"+ ADD NEW VERSION"**, paste your API key in the "Secret value" field, and click **"Add new version"**.
 
-3.  **Find Your Service Account:**
-    *   Go to the IAM page for your project: [https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights](https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights)
-    *   In the main list of principals, find the one that has the role **"Firebase App Hosting Backend"**.
-    *   Copy the full email address for that principal. It should be: `firebase-app-hosting-compute@digital-property-insights.iam.gserviceaccount.com`.
+##### **Step 2: Verify the Permission**
 
-4.  **Grant Permission:**
-    *   On that same IAM page, click **"+ GRANT ACCESS"**.
-    *   In **"New principals"**, paste the **Service account** email you just copied.
-    *   For the **"Role"**, select `Secret Manager Secret Accessor`.
-    *   Click **"Save"**.
+1.  **Go to the IAM Page:**
+    *   Go to the IAM (Permissions) page for your project: [https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights](https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights)
 
-5.  **Redeploy:**
-    *   Come back to the Firebase Studio editor, make a small change to any file (like adding a space), and push it to GitHub again via the Source Control panel. This will trigger a new deployment which should now succeed.
+2.  **Find the App Hosting Service Account:**
+    *   In the main list of principals, find the one that has the role **"Firebase App Hosting Backend"**. Its email address should be: `firebase-app-hosting-compute@digital-property-insights.iam.gserviceaccount.com`.
+
+3.  **Check its Roles:**
+    *   Look at the "Role(s)" column for that principal. It **must** have **two** roles:
+        1.  `Firebase App Hosting Backend`
+        2.  `Secret Manager Secret Accessor`
+    *   If `Secret Manager Secret Accessor` is missing, click the **pencil icon (Edit principal)** on the far right of that row.
+    *   Click **"+ ADD ANOTHER ROLE"**, find and select `Secret Manager Secret Accessor`, and click **"Save"**.
+
+##### **Step 3: Redeploy**
+
+*   After verifying both the secret and the permission, come back to the Firebase Studio editor.
+*   Make a small change to any file (like adding a space) and **push it to GitHub** again via the Source Control panel. This will trigger a new deployment which should now succeed.
