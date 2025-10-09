@@ -12,51 +12,58 @@ To get your website live by pushing your code to GitHub and then deploying it th
 
 This is a two-part process that should only take a few minutes.
 
-1.  **Push Your Code to GitHub:** Send the code from this editor to your empty GitHub repository.
-2.  **Deploy in App Hosting:** Go back to the App Hosting setup page and complete the deployment.
+1.  **Push Your Code to GitHub:** Send the code from this editor to your GitHub repository.
+2.  **Deploy in App Hosting:** The push to GitHub will automatically trigger a deployment in App Hosting.
 
 ---
 
 ### **Step-by-Step Instructions**
 
-#### **Part 1: Push Your Code to GitHub (Right here in the editor)**
+#### **1. Push Your Code to GitHub (Right here in the editor)**
 
-This is the most important step. We need to send your code to your empty GitHub repository.
+This is the most important step. We need to send your code to your GitHub repository.
 
 1.  **Open Source Control:** In the editor window, look at the vertical activity bar on the far left edge of the screen. Click the third icon from the top, which looks like a **branching path (--o--<)**. This will open the Source Control panel.
 
-2.  **Publish the Branch:** You should see a blue button that says **"Publish Branch"**. Click it.
+2.  **Publish the Branch:** You should see a blue button that says **"Publish Branch"** or **"Sync Changes"**. Click it.
 
-3.  **Connect and Authorize:** Follow the prompts that appear. You will need to:
-    *   Log in to your GitHub account (`lukaswatts-cloud`).
-    *   Select your `digital-property-insights` repository when prompted.
+3.  **Connect and Authorize:** The first time you do this, you will need to follow the prompts to log in to your GitHub account and authorize the connection to your `digital-property-insights` repository.
 
-4.  **Wait for it to Finish:** The editor will upload all the files. This might take a minute. Once it's done, your code is on GitHub and the `main` branch is created.
+4.  **Wait for it to Finish:** The editor will upload all the files. This might take a minute. Once it's done, your code is on GitHub.
 
----
+#### **2. Monitor the Deployment**
 
-#### **Part 2: Deploy in App Hosting**
+Pushing your code to the `main` branch on GitHub automatically starts a new deployment in Firebase App Hosting.
 
-Once your code is successfully pushed to GitHub, you can complete the final steps in the Firebase Console.
-
-1.  **Return to the App Hosting Setup Page:** Go back to the browser tab where you saw the "branch not found" error.
-2.  **Refresh the Page:** The page might not update automatically. Refresh the browser tab. The error message should now disappear.
-3.  **Save and Deploy:** Click the **"Save and deploy"** button (or "Next" and then "Confirm").
-4.  **Monitor and Verify:** A rollout will start automatically. You can watch its progress in the **"Rollouts"** tab. Once it succeeds, your website will be live with all the latest changes.
+1.  **Go to App Hosting:** You can monitor the progress here: [Firebase App Hosting Console](https://console.firebase.google.com/project/digital-property-insights/hosting/backends)
+2.  **Check the Status:** A rollout will be "In progress". Once it succeeds, your website will be live with all the latest changes. You can click the link on that page to view your live site.
 
 ---
 
 ### **Troubleshooting**
 
-**Problem: I pushed the code to the wrong repository! (e.g., to `studio` instead of `digital-property-insights`)**
+#### **Problem: Deployment Fails with "Misconfigured secret: GEMINI_API_KEY"**
 
-This is a common mistake and easy to fix. We just need to tell the editor where to send the code.
+This is the most common first-time setup issue. It means the AI features in your app need a secure API key, but it hasn't been provided to the hosting environment.
 
-1.  **Open Source Control:** Click the source control icon (`--o--<`) on the left activity bar.
-2.  **Open the Menu:** At the top of the Source Control panel, click the **"..." (three dots)** menu to see more actions.
-3.  **Find Remote Options:** In the dropdown menu, look for an option named **"Remote"**. Click it.
-4.  **Remove the Old Remote:** From the next submenu, choose **"Remove Remote"** and select `origin`.
-5.  **Add the Correct Remote:** Go back to the same menu (**... > Remote**) and choose **"Add Remote..."**.
-    *   When asked for the **URL**, enter: `https://github.com/lukaswatts-cloud/digital-property-insights.git`
-    *   When asked for the **Remote name**, enter: `origin`
-6.  **Push Again:** After adding the new remote, the **"Publish Branch"** button should reappear. Click it to send your code to the correct repository. Once this is done, go back to the App Hosting page and refresh it.
+**Solution:** You need to create the secret and grant permission one time.
+
+1.  **Get an API Key:**
+    *   Go to Google AI Studio: [https://aistudio.google.com/app/apikey](https://aistudio.google.com/app/apikey)
+    *   Click "Create API key" and select the `digital-property-insights` project.
+    *   Copy the generated key.
+
+2.  **Create the Secret:**
+    *   Go to Secret Manager for your project: [https://console.cloud.google.com/security/secret-manager?project=digital-property-insights](https://console.cloud.google.com/security/secret-manager?project=digital-property-insights)
+    *   Click **"+ CREATE SECRET"**. Name it `GEMINI_API_KEY` and paste your key in the "Secret value" field.
+    *   If it already exists, click on its name, then **"+ ADD NEW VERSION"** to add your key.
+
+3.  **Grant Permission:**
+    *   Go to the IAM page for your project: [https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights](https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights)
+    *   Click **"+ GRANT ACCESS"**.
+    *   In **"New principals"**, paste: `service-339272828787@gcp-sa-apphosting.iam.gserviceaccount.com`
+    *   For the **"Role"**, select `Secret Manager Secret Accessor`.
+    *   Click **"Save"**.
+
+4.  **Redeploy:**
+    *   Come back to the Firebase Studio editor, make a small change to any file (like adding a space), and push it to GitHub again via the Source Control panel. This will trigger a new deployment which should now succeed.
