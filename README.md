@@ -16,21 +16,37 @@ Your website is live and running on Firebase App Hosting.
 
 # How to Connect Your Custom Domain (e.g., your-domain.com)
 
-To make your custom domain show your new website, you need to connect it within Firebase App Hosting.
+To make your custom domain (`digitalpropertyinsights.com.au`) show your new website, you must connect **Firebase Hosting** (the frontend service) to your **Firebase App Hosting** backend.
 
-1.  **Go to the App Hosting Console:**
-    *   Use this link: [https://console.firebase.google.com/project/digital-property-insights/hosting/backends](https://console.firebase.google.com/project/digital-property-insights/hosting/backends)
+### **The Plan**
 
-2.  **Manage Your Backend:**
-    *   Find your backend in the list.
-    *   On the far right of its row, click the **three-dot menu (⋮)** and select **"Manage"**.
+1.  **Set up Firebase Hosting:** Create a new Hosting site.
+2.  **Link to App Hosting:** Configure the Hosting site to get its content from your App Hosting backend.
+3.  **Add Custom Domain:** Add your custom domain to the Hosting site and update your DNS records.
 
-3.  **Add Custom Domain:**
-    *   On the backend dashboard, click the **"Domains"** tab.
-    *   Click the **"Add custom domain"** button.
+### **Step-by-Step Instructions**
 
-4.  **Follow the Wizard:**
-    *   Firebase will provide a step-by-step guide. It will give you specific DNS records (like A records or TXT records) that you need to add to your domain settings where you purchased your domain.
+1.  **Go to the Firebase Hosting Console:**
+    *   Use this link: [https://console.firebase.google.com/project/digital-property-insights/hosting](https://console.firebase.google.com/project/digital-property-insights/hosting)
+
+2.  **Get Started with Hosting:**
+    *   Click the **"Get Started"** button.
+
+3.  **Follow the Setup Wizard:**
+    *   **Step 1 (Install CLI):** The wizard will ask you to install the Firebase CLI. You can **ignore this** and just click **"Next"**.
+    *   **Step 2 (Initialize):** The wizard will ask you to run `firebase init`. You can also **ignore this** and just click **"Next"**.
+    *   **Step 3 (Deploy):** The wizard will ask you to run `firebase deploy`. Click **"Continue to console"** instead.
+
+4.  **Connect Your App Hosting Backend:**
+    *   You should now be on the Hosting dashboard for a new site (it might have a default name).
+    *   On the dashboard, find the section for adding a backend or click on your new site.
+    *   Click **"Add custom domain"**.
+    *   The setup process will first ask you to connect to a backend. Choose the option to connect to an **App Hosting** backend.
+    *   Select your existing `digital-property-insights` backend from the list.
+
+5.  **Add and Verify Your Custom Domain:**
+    *   Once the backend is linked, proceed to add your custom domain (`digitalpropertyinsights.com.au`).
+    *   Firebase will provide a step-by-step guide. It will give you specific DNS records (like `A` records or `TXT` records) that you need to add to your domain settings where you purchased your domain.
 
 ---
 
