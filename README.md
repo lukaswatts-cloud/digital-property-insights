@@ -54,7 +54,9 @@ This is a common mistake and easy to fix. We just need to tell the editor where 
 
 1.  **Open Source Control:** Click the source control icon (`--o--<`) on the left activity bar.
 2.  **Open the Menu:** At the top of the Source Control panel, click the **"..." (three dots)** menu to see more actions.
-3.  **Find Remote Options:** In the dropdown menu, look for an option named **"Remote"** or **"Remotes"**. Click it.
-4.  **Edit the Remote:** From the next submenu, choose **"Edit Remote"** or **"Change Remote URL"**.
-5.  **Enter Correct Repository:** When prompted, enter the correct repository name: `digital-property-insights`.
-6.  **Push Again:** After updating the remote, the "Publish Branch" or "Sync Changes" button should reappear. Click it to send your code to the correct repository. Once this is done, go back to the App Hosting page and refresh it.
+3.  **Find Remote Options:** In the dropdown menu, look for an option named **"Remote"**. Click it.
+4.  **Remove the Old Remote:** From the next submenu, choose **"Remove Remote"** and select `origin`.
+5.  **Add the Correct Remote:** Go back to the same menu (**... > Remote**) and choose **"Add Remote..."**.
+    *   When asked for the **URL**, enter: `https://github.com/lukaswatts-cloud/digital-property-insights.git`
+    *   When asked for the **Remote name**, enter: `origin`
+6.  **Push Again:** After adding the new remote, the **"Publish Branch"** button should reappear. Click it to send your code to the correct repository. Once this is done, go back to the App Hosting page and refresh it.
