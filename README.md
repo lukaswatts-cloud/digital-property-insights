@@ -14,11 +14,29 @@ Your website is live and running on Firebase App Hosting.
 
 ---
 
+# How to Connect Your Custom Domain (e.g., your-domain.com)
+
+To make your custom domain show your new website, you need to connect it within Firebase App Hosting.
+
+1.  **Go to the App Hosting Console:**
+    *   Use this link: [https://console.firebase.google.com/project/digital-property-insights/hosting/backends](https://console.firebase.google.com/project/digital-property-insights/hosting/backends)
+
+2.  **Manage Your Backend:**
+    *   Find your backend in the list.
+    *   On the far right of its row, click the **three-dot menu (⋮)** and select **"Manage"**.
+
+3.  **Add Custom Domain:**
+    *   On the backend dashboard, click the **"Domains"** tab.
+    *   Click the **"Add custom domain"** button.
+
+4.  **Follow the Wizard:**
+    *   Firebase will provide a step-by-step guide. It will give you specific DNS records (like A records or TXT records) that you need to add to your domain settings where you purchased your domain.
+
+---
+
 # How to Publish Your Website
 
 This is a guide to take the code from your Firebase Studio workspace and publish it to your live website.
-
----
 
 ### **The Goal**
 
