@@ -8,22 +8,24 @@ This is a simplified guide for publishing updates to your website. You only need
 
 To take the code from your Firebase Studio workspace and publish it to your live website at `digitalpropertyinsights.com.au`.
 
-### **The Two-Part Plan**
+### **The Three-Part Plan**
 
-Our plan involves two main parts:
-1.  **Pushing your code** from this workspace to your GitHub repository.
-2.  **Deploying that code** from GitHub using Firebase App Hosting.
+Our plan involves three main parts:
+1.  **Opening the correct editor** for your project.
+2.  **Pushing your code** from that editor to your GitHub repository.
+3.  **Deploying that code** from GitHub using Firebase App Hosting.
 
 ---
 
 ### **Step-by-Step Instructions**
 
-#### **Part 1: Open the Firebase Studio Editor**
+#### **Part 1: Find and Open Your Workspace Editor**
 
 If you are looking at the main Firebase console dashboard (the screen with "Project Overview"), you first need to open your project's code editor.
 
 1.  **Find "Related development tools"**: On the main Firebase console page, look at the menu on the left-hand side.
-2.  **Click "Firebase Studio"**: At the bottom of this menu, click on the **Firebase Studio** link. This will open the code editor where all your project files are stored.
+2.  **Click "Firebase Studio"**: At the bottom of this menu, click on the **Firebase Studio** link. This will open the Firebase Studio welcome page.
+3.  **Open Your Workspace**: On the welcome page, under "My workspaces", find and click on the card named **"Digital Property Insights"**. This will open the code editor where all your project files are stored.
 
 ---
 
