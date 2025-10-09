@@ -17,7 +17,7 @@ This is a two-part process that should only take a few minutes.
 
 ---
 
-### **Step-by-Step Instructions**
+### **Step-by-Step Instructions
 
 #### **1. Push Your Code to GitHub (Right here in the editor)**
 
@@ -53,15 +53,18 @@ This is the most common first-time setup issue. It means the AI features in your
     *   Click "Create API key" and select the `digital-property-insights` project.
     *   Copy the generated key.
 
-2.  **Create the Secret:**
+2.  **Create or Update the Secret:**
     *   Go to Secret Manager for your project: [https://console.cloud.google.com/security/secret-manager?project=digital-property-insights](https://console.cloud.google.com/security/secret-manager?project=digital-property-insights)
-    *   Click **"+ CREATE SECRET"**. Name it `GEMINI_API_KEY` and paste your key in the "Secret value" field.
-    *   If it already exists, click on its name, then **"+ ADD NEW VERSION"** to add your key.
+    *   **If you do not see `GEMINI_API_KEY` in the list:**
+        *   Click **"+ CREATE SECRET"**. Name it `GEMINI_API_KEY` and paste your key in the "Secret value" field. Click **"Create secret"**.
+    *   **If you *do* see `GEMINI_API_KEY` in the list:**
+        *   Click on its name.
+        *   Click **"+ ADD NEW VERSION"** to add your key as the newest, active version.
 
 3.  **Find Your Service Account:**
     *   Go to the IAM page for your project: [https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights](https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights)
     *   In the main list of principals, find the one that has the role **"Firebase App Hosting Backend"**.
-    *   Copy the full email address for that principal. This is your backend's service account.
+    *   Copy the full email address for that principal. It should be: `firebase-app-hosting-compute@digital-property-insights.iam.gserviceaccount.com`.
 
 4.  **Grant Permission:**
     *   On that same IAM page, click **"+ GRANT ACCESS"**.
