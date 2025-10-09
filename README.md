@@ -18,12 +18,12 @@ Our plan involves two main parts:
 
 ### **Step-by-Step Instructions**
 
-#### **Part 1: Go Back to the Editor (Your Workspace)**
+#### **Part 1: Open the Firebase Studio Editor**
 
-If you are currently looking at the main Firebase console dashboard, you first need to open your project's editor.
+If you are looking at the main Firebase console dashboard (the screen with "Project Overview"), you first need to open your project's code editor.
 
-1.  **Go to the Firebase Console:** Navigate to your [Firebase Console](https://console.firebase.google.com/).
-2.  **Open Your Project:** On the main dashboard, click on your project card labeled **"Firebase app"** with the description **"Digital Property Insights"**. This will take you into the Firebase Studio editor where your code is.
+1.  **Find "Related development tools"**: On the main Firebase console page, look at the menu on the left-hand side.
+2.  **Click "Firebase Studio"**: At the bottom of this menu, click on the **Firebase Studio** link. This will open the code editor where all your project files are stored.
 
 ---
 
