@@ -59,15 +59,13 @@ This is the most common first-time setup issue. It means the AI features in your
     *   If it already exists, click on its name, then **"+ ADD NEW VERSION"** to add your key.
 
 3.  **Find Your Service Account:**
-    *   Go to the App Hosting page for your project: [https://console.firebase.google.com/project/digital-property-insights/hosting/backends](https://console.firebase.google.com/project/digital-property-insights/hosting/backends)
-    *   Click on your backend (e.g., `digital-property-insights` or `studio`).
-    *   Click on the **"Settings"** tab.
-    *   Copy the **Service account** email address.
+    *   Go to the IAM page for your project: [https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights](https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights)
+    *   In the main list of principals, find the one that has the role **"Firebase App Hosting Backend"**.
+    *   Copy the full email address for that principal. This is your backend's service account.
 
 4.  **Grant Permission:**
-    *   Go to the IAM page for your project: [https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights](https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights)
-    *   Click **"+ GRANT ACCESS"**.
-    *   In **"New principals"**, paste the **Service account** email you copied in the previous step.
+    *   On that same IAM page, click **"+ GRANT ACCESS"**.
+    *   In **"New principals"**, paste the **Service account** email you just copied.
     *   For the **"Role"**, select `Secret Manager Secret Accessor`.
     *   Click **"Save"**.
 
