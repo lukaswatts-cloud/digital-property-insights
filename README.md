@@ -23,7 +23,7 @@ This is a two-part process that should only take a few minutes.
 
 This is the most important step. We need to send your code to your GitHub repository.
 
-1.  **Open Source Control:** In the editor window, look at the vertical activity bar on the far left edge of the screen. Click the third icon from the top, which looks like a **branching path (--o--<)**. This will open the Source Control panel.
+1.  **Open Source Control:** In the editor window, look at the vertical activity bar on the far left of the screen. Click the third icon from the top, which looks like a **branching path (--o--<)**. This will open the Source Control panel.
 
 2.  **Publish the Branch:** You should see a blue button that says **"Publish Branch"** or **"Sync Changes"**. Click it.
 
@@ -58,12 +58,18 @@ This is the most common first-time setup issue. It means the AI features in your
     *   Click **"+ CREATE SECRET"**. Name it `GEMINI_API_KEY` and paste your key in the "Secret value" field.
     *   If it already exists, click on its name, then **"+ ADD NEW VERSION"** to add your key.
 
-3.  **Grant Permission:**
+3.  **Find Your Service Account:**
+    *   Go to the App Hosting page for your project: [https://console.firebase.google.com/project/digital-property-insights/hosting/backends](https://console.firebase.google.com/project/digital-property-insights/hosting/backends)
+    *   Click on your backend (e.g., `digital-property-insights` or `studio`).
+    *   Click on the **"Settings"** tab.
+    *   Copy the **Service account** email address.
+
+4.  **Grant Permission:**
     *   Go to the IAM page for your project: [https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights](https://console.cloud.google.com/iam-admin/iam?project=digital-property-insights)
     *   Click **"+ GRANT ACCESS"**.
-    *   In **"New principals"**, paste: `service-339272828787@gcp-sa-apphosting.iam.gserviceaccount.com`
+    *   In **"New principals"**, paste the **Service account** email you copied in the previous step.
     *   For the **"Role"**, select `Secret Manager Secret Accessor`.
     *   Click **"Save"**.
 
-4.  **Redeploy:**
+5.  **Redeploy:**
     *   Come back to the Firebase Studio editor, make a small change to any file (like adding a space), and push it to GitHub again via the Source Control panel. This will trigger a new deployment which should now succeed.
