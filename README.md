@@ -50,12 +50,11 @@ Once your code is successfully pushed to GitHub, you can complete the final step
 
 **Problem: I pushed the code to the wrong repository! (e.g., to `studio` instead of `digital-property-insights`)**
 
-This is an easy fix. We just need to tell the editor where to send the code.
+This is a common mistake and easy to fix. We just need to tell the editor where to send the code.
 
-1.  **Open Source Control:** Click the source control icon (`--o--<`) on the left bar.
-2.  **Find "Remotes":** Look for the "REMOTES" section in the panel.
-3.  **Edit the Remote:**
-    *   Hover over `origin` and click the `...` (three dots) menu that appears.
-    *   Select "Edit Remote".
-    *   Enter the correct repository name: `digital-property-insights`.
-4.  **Push Again:** The "Publish Branch" or "Sync Changes" button should reappear. Click it to send your code to the correct repository.
+1.  **Open Source Control:** Click the source control icon (`--o--<`) on the left activity bar.
+2.  **Open the Menu:** At the top of the Source Control panel, click the **"..." (three dots)** menu to see more actions.
+3.  **Find Remote Options:** In the dropdown menu, look for an option named **"Remote"** or **"Remotes"**. Click it.
+4.  **Edit the Remote:** From the next submenu, choose **"Edit Remote"** or **"Change Remote URL"**.
+5.  **Enter Correct Repository:** When prompted, enter the correct repository name: `digital-property-insights`.
+6.  **Push Again:** After updating the remote, the "Publish Branch" or "Sync Changes" button should reappear. Click it to send your code to the correct repository. Once this is done, go back to the App Hosting page and refresh it.
