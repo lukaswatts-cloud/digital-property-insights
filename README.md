@@ -33,7 +33,7 @@ If you are looking at the main Firebase console dashboard (the screen with "Proj
 
 Now that you are in the editor, you need to send your code to the empty GitHub repository you created. This will create the `main` branch that Firebase needs.
 
-1.  **Find Source Control:** In the top menu bar of your workspace, click **View -> Source Control**.
+1.  **Find the Source Control Icon:** In the top-right corner of the editor window, look for a set of icons. Click the **Source Control icon**, which looks like this: **`</>`**.
 2.  **Connect to GitHub:** Follow the prompts that appear. You will need to:
     *   Log in and authorize your GitHub account (`lukaswatts-cloud`).
     *   Select your `digital-property-insights` repository.
