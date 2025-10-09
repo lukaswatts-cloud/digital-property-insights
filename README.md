@@ -39,7 +39,6 @@ To make your custom domain (`digitalpropertyinsights.com.au`) show your new webs
 
 4.  **Connect Your App Hosting Backend:**
     *   You should now be on the Hosting dashboard for a new site (it might have a default name).
-    *   On the dashboard, find the section for adding a backend or click on your new site.
     *   Click **"Add custom domain"**.
     *   The setup process will first ask you to connect to a backend. Choose the option to connect to an **App Hosting** backend.
     *   Select your existing `digital-property-insights` backend from the list.
