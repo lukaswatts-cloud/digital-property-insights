@@ -11,56 +11,42 @@ To take the code from your Firebase Studio workspace and publish it to your live
 ### **The Three-Part Plan**
 
 Our plan involves three main parts:
-1.  **Opening the correct editor** for your project.
-2.  **Pushing your code** from that editor to your GitHub repository.
-3.  **Deploying that code** from GitHub using Firebase App Hosting.
+1.  **Pushing your code** from the editor to your GitHub repository.
+2.  **Connecting App Hosting** to that GitHub repository.
+3.  **Deploying your site** from the App Hosting dashboard.
 
 ---
 
 ### **Step-by-Step Instructions**
 
-#### **Part 1: Find and Open Your Workspace Editor**
+#### **Part 1: Push Your Code to GitHub**
 
-If you are looking at the main Firebase console dashboard (the screen with "Project Overview"), you first need to open your project's code editor.
+This is the most important step. We need to send your code to your empty GitHub repository.
 
-1.  **Find "Related development tools"**: On the main Firebase console page, look at the menu on the left-hand side.
-2.  **Click "Firebase Studio"**: At the bottom of this menu, click on the **Firebase Studio** link. This will open the Firebase Studio welcome page.
-3.  **Open Your Workspace**: On the welcome page, under "My workspaces", find and click on the card named **"Digital Property Insights"**. This will open the code editor where all your project files are stored.
+1.  **Find the Source Control Icon:** In the editor window, look at the vertical activity bar on the far left edge of the screen. Click the third icon from the top, which looks like a **branching path (--o--<)**. This will open the Source Control panel.
 
----
+2.  **Connect to GitHub:** You should see a button or prompt to "Publish to GitHub" or "Connect to GitHub". Click it.
 
-#### **Part 2: Push Your Code to GitHub**
-
-Now that you are in the editor, you need to send your code to the empty GitHub repository you created. This will create the `main` branch that Firebase needs.
-
-1.  **Find the Source Control Icon:** In the top-right corner of the editor window, look for a set of icons. Click the **Source Control icon**, which looks like this: **`</>`**.
-2.  **Connect to GitHub:** Follow the prompts that appear. You will need to:
+3.  **Authorize and Select:** Follow the prompts that appear. You will need to:
     *   Log in and authorize your GitHub account (`lukaswatts-cloud`).
     *   Select your `digital-property-insights` repository.
-3.  **Commit and Push:** Use the source control panel to **commit** all your project files and **push** them to GitHub. This will create the `main` branch.
+
+4.  **Commit and Push:** Use the source control panel to **commit** all your project files and **push** (or publish) them to GitHub. This will create the `main` branch.
 
 ---
 
-#### **Part 3: Configure App Hosting and Deploy**
+#### **Part 2: Configure and Deploy in App Hosting**
 
-Once your code is successfully pushed to GitHub, you can complete the final step in the Firebase Console.
+Once your code is successfully pushed to GitHub, you can complete the final steps in the Firebase Console.
 
-1.  **Open App Hosting:**
-    *   Navigate back to your [Firebase Console](https://console.firebase.google.com/).
-    *   Select your project again.
-    *   In the left-hand menu, under the **Build** category, click on **App Hosting**.
+1.  **Navigate to App Hosting:** Open your Firebase Console and go to the **App Hosting** section.
+2.  **Go to Settings:** Go back to the GitHub connection settings page (the one that showed the "branch not found" error).
+3.  **Save and Deploy:** The settings should be pre-filled:
+    *   Repository: `digital-property-insights`
+    *   Live branch: `main`
+    *   App root directory: `/`
+4.  The error message about the branch not existing should now be gone. Click the **"Save and deploy"** or **"Next"** button. A confirmation popup will appear. Click **"Confirm"**.
 
-2.  **Go to Settings:**
-    *   In the App Hosting section, click on the **"Settings"** tab.
-    *   You will see the configuration page for your GitHub connection.
-
-3.  **Save and Deploy:**
-    *   The settings should be pre-filled:
-        *   Repository: `digital-property-insights`
-        *   Live branch: `main`
-    *   Because you have now pushed your code, the error message about the branch not existing should be gone.
-    *   Click the **"Save and deploy"** button. A confirmation popup will appear. Click **"Confirm"**.
-
-4.  **Monitor and Verify:**
+5.  **Monitor and Verify:**
     *   A rollout will start automatically. You can watch its progress in the **"Rollouts"** tab.
     *   Once it succeeds, your website at `digitalpropertyinsights.com.au` will be live with all the latest changes.
