@@ -2,32 +2,52 @@
 
 This guide provides the steps to publish updates from your Firebase Studio workspace to your live website.
 
----
-
-### **How to Deploy Your Website**
-
-Your project is set up to deploy directly from Firebase Studio using Firebase App Hosting. You do not need to use GitHub.
-
-### **Step 1: Open Firebase App Hosting**
-
-1.  Navigate to your [Firebase Console](https://console.firebase.google.com/).
-2.  On the main dashboard, click on your project card labeled **"Firebase app"** with the description **"Digital Property Insights"**.
-3.  In the left-hand menu, under the **Build** category, click on **App Hosting**. This will take you to the dashboard for your website backend.
+**IMPORTANT:** The deployment process requires connecting your workspace to a GitHub repository.
 
 ---
 
-### **Step 2: Create a New Rollout**
+### **Part 1: Access Your Firebase Studio Workspace**
 
-1.  On the App Hosting "Overview" tab, you will see a summary of your web app.
-2.  Find and click the **"Create rollout"** button. This is typically located in the "Summary" card.
-3.  This action takes all the latest code and changes from your Firebase Studio workspace and begins a new deployment.
+1.  **Go to the Firebase Console:** Navigate to your [Firebase Console](https://console.firebase.google.com/).
+2.  **Open Your Project:** On the main dashboard, click on your project card labeled **"Firebase app"** with the description **"Digital Property Insights"**. This will take you into the Firebase Studio editor where your code is.
 
 ---
 
-### **Step 3: Monitor and Verify**
+### **Part 2: Push Your Code to a New GitHub Repository**
 
-1.  After clicking "Create rollout," you can go to the **"Rollouts"** tab to monitor the progress of your deployment.
-2.  Once the rollout is complete and has a "success" status, your changes will be live on your custom domain (`digitalpropertyinsights.com.au`).
-3.  You may need to do a "hard refresh" in your browser (Ctrl+Shift+R or Cmd+Shift+R) to clear the local cache and see the latest updates.
+Your code currently exists only in your Firebase Studio workspace. To deploy it, you must first push it to a GitHub repository.
 
-That's it! Every time you want to update your live website with changes you've made in Firebase Studio, you will follow this simple "Create rollout" process.
+1.  **Create an Empty GitHub Repository:**
+    *   Go to [github.com](https://github.com) and create a **new, empty repository**. Name it `digital-property-insights`.
+    *   **Do not** initialize it with a README or any other files.
+
+2.  **Connect Studio to GitHub:**
+    *   In your open Firebase Studio workspace (from Part 1), find the top menu bar.
+    *   Click **View -> Source Control**. This will open the source control panel.
+    *   Follow the prompts to connect and authorize your GitHub account.
+
+3.  **Push Your Code:**
+    *   Once connected, use the source control panel to **commit** all your project files and **push** them to the `digital-property-insights` repository. This will create the `main` branch in GitHub.
+
+---
+
+### **Part 3: Configure App Hosting and Deploy**
+
+Now you will link Firebase App Hosting to the repository you just pushed your code to.
+
+1.  **Open App Hosting:**
+    *   Navigate back to your [Firebase Console](https://console.firebase.google.com/).
+    *   Select your project again.
+    *   In the left-hand menu, under the **Build** category, click on **App Hosting**.
+
+2.  **Connect to GitHub (Final Step):**
+    *   You may see a prompt to connect to GitHub. If so, click through and select your `digital-property-insights` repository.
+    *   If you see the "Overview" page, click the **"Create rollout"** button. A tooltip will appear with a blue **"settings"** link. Click it.
+    *   On the settings page, select the `digital-property-insights` repository.
+    *   For the **"Live branch"**, enter `main`. The error message you saw before should now be gone because the branch exists.
+    *   Click **"Save and deploy"**.
+
+3.  **Monitor and Verify:**
+    *   The "Save and deploy" action will trigger your first rollout from GitHub.
+    *   You can monitor its progress in the **"Rollouts"** tab.
+    *   Once it succeeds, your website at `digitalpropertyinsights.com.au` will be live with all the latest changes.
