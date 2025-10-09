@@ -1,3 +1,19 @@
+# How to View Your Live Website
+
+Your website is live and running on Firebase App Hosting.
+
+1.  **Go to the App Hosting Console:**
+    *   [https://console.firebase.google.com/project/digital-property-insights/hosting/backends](https://console.firebase.google.com/project/digital-property-insights/hosting/backends)
+
+2.  **Find Your Site's URL:**
+    *   On that page, you will see your backend listed.
+    *   Look for the URL under the **"Domains"** column. It will be a clickable link that looks something like `digital-property-insights-....apphosting.dev`.
+
+3.  **Click the Link:**
+    *   Clicking that link will take you to your live website.
+
+---
+
 # How to Publish Your Website
 
 This is a guide to take the code from your Firebase Studio workspace and publish it to your live website.
