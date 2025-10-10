@@ -2,12 +2,15 @@
 {
   "hosting": {
     "site": "digital-property-insights",
+    "apphosting": {
+      "backendId": "digital-property-insights",
+      "region": "asia-southeast1"
+    },
     "rewrites": [
       {
         "source": "**",
         "apphosting": {
-          "backendId": "digital-property-insights",
-          "region": "asia-southeast1"
+          "backendId": "digital-property-insights"
         }
       }
     ]
