@@ -1,4 +1,3 @@
-
 # How to Publish Your Website
 
 This is a guide to take the code from your Firebase Studio workspace and publish it to your live website.
@@ -25,7 +24,7 @@ This is the most important step. We need to send your code to your GitHub reposi
 1.  **Open Source Control:** In the editor window, look at the vertical activity bar on the far left of the screen. Click the third icon from the top, which looks like a **branching path (--o--<)**. This will open the Source Control panel.
 
 2.  **Stage Your Changes:**
-    *   You should now see `firebase.json` and `README.md` listed under "Changes".
+    *   You should see `firebase.json` and `README.md` listed under "Changes".
     *   Hover your mouse over each file and click the **plus icon (+)** that appears. This "stages" the files, preparing them to be saved.
 
 3.  **Commit Your Changes:**
