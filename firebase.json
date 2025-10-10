@@ -1,0 +1,15 @@
+
+{
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "id": "digital-property-insights",
+      "region": "us-central1"
+    }
+  }
+}
