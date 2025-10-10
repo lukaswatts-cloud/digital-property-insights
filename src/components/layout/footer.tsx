@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="flex flex-col items-start gap-4">
             <Link href="/" className="flex items-center space-x-2 focus:outline-none">
               <div className="relative h-8 w-8">
-                {logo && <Image src={logo.imageUrl} alt={logo.description} fill className="object-contain" />}
+                {logo && <Image src={logo.imageUrl} alt={logo.description} fill sizes="32px" className="object-contain" />}
               </div>
               <span className="text-lg font-bold">Digital Property Insights</span>
             </Link>
