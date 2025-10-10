@@ -1,15 +1,19 @@
 
 {
   "hosting": {
-    "source": ".",
+    "rewrites": [
+      {
+        "source": "**",
+        "apphosting": {
+          "backendId": "digital-property-insights",
+          "region": "asia-southeast1"
+        }
+      }
+    ],
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "frameworksBackend": {
-      "id": "digital-property-insights",
-      "region": "asia-southeast1"
-    }
+    ]
   }
 }
