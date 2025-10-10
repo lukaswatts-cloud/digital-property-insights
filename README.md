@@ -1,3 +1,50 @@
+# How to Publish Your Website
+
+This is a guide to take the code from your Firebase Studio workspace and publish it to your live website.
+
+### **The Goal**
+
+To get your website live by pushing your code to GitHub and then deploying it through Firebase App Hosting.
+
+### **The Plan**
+
+This is a two-part process that should only take a few minutes.
+
+1.  **Push Your Code to GitHub:** Send the code from this editor to your GitHub repository.
+2.  **Deploy in App Hosting:** The push to GitHub will automatically trigger a deployment in App Hosting.
+
+---
+
+### **Step-by-Step Instructions
+
+#### **1. Push Your Code to GitHub (Right here in the editor)**
+
+This is the most important step. We need to send your code to your GitHub repository.
+
+1.  **Open Source Control:** In the editor window, look at the vertical activity bar on the far left of the screen. Click the third icon from the top, which looks like a **branching path (--o--<)**. This will open the Source Control panel.
+
+2.  **Stage Your Changes:**
+    *   You should now see `README.md` listed under "Changes".
+    *   Hover your mouse over `README.md` and click the **plus icon (+)** that appears. This "stages" the file, preparing it to be saved.
+
+3.  **Commit Your Changes:**
+    *   The file will move to a "Staged Changes" section.
+    *   In the "Message" box above, type a short description (e.g., "Publish website").
+    *   Click the **Commit** button.
+
+4.  **Sync to GitHub:**
+    *   Click the **"Sync Changes"** button (it has circular arrows) to push your commit to GitHub.
+    *   The first time you do this, you may need to follow prompts to log in to and authorize GitHub.
+
+#### **2. Monitor the Deployment**
+
+Pushing your code to the `main` branch on GitHub automatically starts a new deployment in Firebase App Hosting.
+
+1.  **Go to App Hosting:** You can monitor the progress here: [Firebase App Hosting Console](https://console.firebase.google.com/project/digital-property-insights/hosting/backends)
+2.  **Check the Status:** A rollout will be "In progress". Once it succeeds, your website will be live with all the latest changes. You can click the link on that page to view your live site.
+
+---
+
 # How to View Your Live Website
 
 Your website is live and running on Firebase App Hosting.
@@ -49,49 +96,9 @@ To make your custom domain (`digitalpropertyinsights.com.au`) show your new webs
 
 ---
 
-# How to Publish Your Website
+# Troubleshooting
 
-This is a guide to take the code from your Firebase Studio workspace and publish it to your live website.
-
-### **The Goal**
-
-To get your website live by pushing your code to GitHub and then deploying it through Firebase App Hosting.
-
-### **The Plan**
-
-This is a two-part process that should only take a few minutes.
-
-1.  **Push Your Code to GitHub:** Send the code from this editor to your GitHub repository.
-2.  **Deploy in App Hosting:** The push to GitHub will automatically trigger a deployment in App Hosting.
-
----
-
-### **Step-by-Step Instructions
-
-#### **1. Push Your Code to GitHub (Right here in the editor)**
-
-This is the most important step. We need to send your code to your GitHub repository.
-
-1.  **Open Source Control:** In the editor window, look at the vertical activity bar on the far left of the screen. Click the third icon from the top, which looks like a **branching path (--o--<)**. This will open the Source Control panel.
-
-2.  **Publish the Branch:** You should see a blue button that says **"Publish Branch"** or **"Sync Changes"**. Click it.
-
-3.  **Connect and Authorize:** The first time you do this, you will need to follow the prompts to log in to your GitHub account and authorize the connection to your `digital-property-insights` repository.
-
-4.  **Wait for it to Finish:** The editor will upload all the files. This might take a minute. Once it's done, your code is on GitHub.
-
-#### **2. Monitor the Deployment**
-
-Pushing your code to the `main` branch on GitHub automatically starts a new deployment in Firebase App Hosting.
-
-1.  **Go to App Hosting:** You can monitor the progress here: [Firebase App Hosting Console](https://console.firebase.google.com/project/digital-property-insights/hosting/backends)
-2.  **Check the Status:** A rollout will be "In progress". Once it succeeds, your website will be live with all the latest changes. You can click the link on that page to view your live site.
-
----
-
-### **Troubleshooting**
-
-#### **Problem: Deployment Fails with "Misconfigured secret: GEMINI_API_KEY"**
+### **Problem: Deployment Fails with "Misconfigured secret: GEMINI_API_KEY"**
 
 This error means the website's hosting environment is trying to read the `GEMINI_API_KEY` from Google's Secret Manager, but it's failing. This is almost always caused by one of two issues:
 
