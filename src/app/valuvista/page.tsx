@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, GaugeCircle, AreaChart, Search, ArrowRight } from 'lucide-react';
 import { SiteImages } from '@/lib/site-images';
+import { ValuationForm } from '@/components/valuvista/valuation-form';
 
 const valuvistaMockup = SiteImages.find(img => img.id === 'valuvista-mockup');
 
@@ -38,55 +39,21 @@ export default function ValuVistaPage() {
       <section className="bg-secondary py-16 md:py-24">
         <div className="container text-center">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">ValuVista: AI-Powered Property Valuation</h1>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Experience the future of real estate appraisal. ValuVista provides instant, accurate, and transparent property valuations to empower your decisions.
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+            Experience the future of real estate appraisal. Enter a property address below to receive an instant, data-rich valuation report powered by our advanced AI.
           </p>
-          <div className="mt-8">
-            <Button size="lg" asChild>
-              <Link href="/contact?subject=ValuVista+Demo">Request a Demo</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24">
-        <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="inline-block rounded-lg bg-secondary px-3 py-1 text-sm font-medium">Key Features</div>
-            <h2 className="text-3xl font-bold tracking-tight">The Most Advanced Valuation Tool on the Market</h2>
-            <p className="text-muted-foreground">
-              ValuVista combines millions of data points with machine learning to provide valuations you can trust. Explore the features that set us apart.
-            </p>
-            <div className="space-y-4">
-              {features.map((feature, index) => (
-                <div key={index} className="flex gap-4">
-                  <div>{feature.icon}</div>
-                  <div>
-                    <h3 className="font-semibold">{feature.title}</h3>
-                    <p className="text-sm text-muted-foreground">{feature.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
-            {valuvistaMockup && (
-              <Image
-                src={valuvistaMockup.imageUrl}
-                alt={valuvistaMockup.description}
-                width={800}
-                height={600}
-                className="object-cover"
-                data-ai-hint={valuvistaMockup.imageHint}
-              />
-            )}
-          </div>
+        <div className="container">
+           <ValuationForm />
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-secondary">
         <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <div className="order-2 md:order-1 space-y-4">
+           <div className="order-2 md:order-1 space-y-4">
              <div className="inline-block rounded-lg bg-primary text-primary-foreground px-3 py-1 text-sm font-medium">Benefits</div>
             <h2 className="text-3xl font-bold tracking-tight">Work Smarter, Not Harder</h2>
             <p className="text-muted-foreground">
@@ -100,13 +67,6 @@ export default function ValuVistaPage() {
                 </li>
               ))}
             </ul>
-            <div className="pt-4">
-              <Button variant="link" className="p-0 h-auto" asChild>
-                <Link href="/about">
-                  Discover Our Mission <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
-              </Button>
-            </div>
           </div>
            <div className="order-1 md:order-2">
             <Card>
