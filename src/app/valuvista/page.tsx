@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, GaugeCircle, AreaChart, Search, ArrowRight } from 'lucide-react';
 import { SiteImages } from '@/lib/site-images';
-import { ValuationForm } from '@/components/valuvista/valuation-form';
 
 const valuvistaMockup = SiteImages.find(img => img.id === 'valuvista-mockup');
 
@@ -40,14 +39,37 @@ export default function ValuVistaPage() {
         <div className="container text-center">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">ValuVista: AI-Powered Property Valuation</h1>
           <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-            Experience the future of real estate appraisal. Enter a property address below to receive an instant, data-rich valuation report powered by our advanced AI.
+            Experience the future of real estate appraisal. ValuVista provides instant, accurate, and transparent property valuations to empower your decisions.
           </p>
+          <div className="mt-8">
+            <Button size="lg" asChild>
+              <Link href="/contact?subject=ValuVista+Demo">Request a Demo</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
       <section className="py-16 md:py-24">
         <div className="container">
-           <ValuationForm />
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold tracking-tight">The Most Advanced Valuation Tool on the Market</h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+             ValuVista combines millions of data points with machine learning to provide valuations you can trust. Explore the features that set us apart.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {features.map((feature, index) => (
+              <Card key={index}>
+                <CardHeader>
+                  {feature.icon}
+                  <CardTitle className="mt-4">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{feature.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
