@@ -1,0 +1,106 @@
+name: Generate Repo Map
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+    paths:
+      - "**"            # regenerate map on any change
+      - "!repo-map.json"
+      - "!docs/repo-map.md"
+
+jobs:
+  map:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate repo map (Markdown + JSON)
+        run: |
+          python3 << 'PY'
+          import os, json, sys
+          from pathlib import Path
+
+          ROOT = Path(".").resolve()
+          IGNORE_DIRS = {".git", ".github", "__pycache__", "node_modules", ".venv", "venv"}
+          IGNORE_FILES = {"acme.json"}
+          MAX_TREE_DEPTH = 10
+
+          file_entries = []
+          for p in ROOT.rglob("*"):
+            rel = p.relative_to(ROOT)
+            parts = rel.parts
+            if any(part in IGNORE_DIRS for part in parts):
+              continue
+            if p.name in IGNORE_FILES:
+              continue
+            if p.is_file():
+              try:
+                size = p.stat().st_size
+              except Exception:
+                size = None
+              file_entries.append({
+                "path": str(rel),
+                "size_bytes": size,
+                "ext": p.suffix,
+              })
+
+          # Write JSON
+          Path("repo-map.json").write_text(json.dumps({
+            "files": file_entries,
+            "count": len(file_entries),
+          }, indent=2), encoding="utf-8")
+
+          # Build Markdown tree
+          def human(n):
+            if n is None: return "?"
+            for unit in ["B","KB","MB","GB"]:
+              if n < 1024 or unit == "GB":
+                return f"{n:.0f} {unit}" if unit=="B" else f"{n/1024:.1f} {unit}"
+              n /= 1024
+
+          lines = []
+          lines.append("# Repository Map\n")
+          lines.append("This page lists all files in the repo (excluding common build/hidden dirs).\n")
+          lines.append("\n## Summary\n")
+          lines.append(f"- Total files: **{len(file_entries)}**\n")
+          lines.append("\n## File Tree\n")
+          # Build tree by directories
+          tree = {}
+          for e in file_entries:
+            parts = Path(e["path"]).parts
+            node = tree
+            for part in parts[:-1]:
+              node = node.setdefault(part, {})
+            node.setdefault("__files__", []).append(e)
+
+          def walk(node, prefix=""):
+            for name, child in sorted((k,v) for k,v in node.items() if k!="__files__"):
+              print_line = f"{prefix}📁 {name}"
+              lines.append(print_line)
+              walk(child, prefix + "    ")
+            for e in sorted(node.get("__files__", []), key=lambda x: x["path"]):
+              lines.append(f"{prefix}📄 {e['path']}  —  {human(e['size_bytes'])}")
+
+          walk(tree)
+          Path("docs/repo-map.md").parent.mkdir(parents=True, exist_ok=True)
+          Path("docs/repo-map.md").write_text("\n".join(lines), encoding="utf-8")
+          PY
+
+      - name: Commit repo map
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add repo-map.json docs/repo-map.md
+          git commit -m "chore(docs): update repo map" || echo "No changes to commit"
+          git push
+
+      - name: Build MkDocs (optional local build check)
+        run: |
+          pip install mkdocs mkdocs-material
+          mkdocs build --strict
