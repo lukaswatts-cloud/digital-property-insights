@@ -1,0 +1,7 @@
+
+site_name: Digital Property Insights Docs
+site_url: https://docs.digitalpropertyinsights.com.au
+theme:
+  name: material
+nav:
+  - Home: index.md
