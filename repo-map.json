@@ -8,10 +8,6 @@
     "size": 2955
   },
   {
-    "path": "docs-and-map.yml",
-    "size": 2852
-  },
-  {
     "path": "README.md",
     "size": 1722
   },
@@ -37,7 +33,7 @@
   },
   {
     "path": "repo-map.json",
-    "size": 4759
+    "size": 5030
   },
   {
     "path": "mkdocs.yml",
@@ -62,10 +58,6 @@
   {
     "path": "public/index.html",
     "size": 318
-  },
-  {
-    "path": "docs/repo-map.md",
-    "size": 2914
   },
   {
     "path": "docs/website-copy.md",
