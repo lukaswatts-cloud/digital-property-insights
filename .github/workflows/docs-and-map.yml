@@ -36,7 +36,6 @@ jobs:
           python3 << 'PY'
           import json
           from pathlib import Path
-
           ROOT = Path(".")
           IGNORE_DIRS = {".git", ".github", "node_modules", "__pycache__"}
           files = []
@@ -50,10 +49,8 @@ jobs:
                   except Exception:
                       size = None
                   files.append({"path": str(rel), "size": size})
-
           # Write JSON
           Path("repo-map.json").write_text(json.dumps(files, indent=2), encoding="utf-8")
-
           # Write Markdown
           lines = ["# Repo Map\n", f"Total files: {len(files)}\n\n"]
           for e in files:
