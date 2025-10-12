@@ -1,0 +1,290 @@
+[
+  {
+    "path": "tsconfig.json",
+    "size": 602
+  },
+  {
+    "path": "tailwind.config.js",
+    "size": 2955
+  },
+  {
+    "path": "README.md",
+    "size": 1722
+  },
+  {
+    "path": ".gitignore",
+    "size": 490
+  },
+  {
+    "path": "next.config.mjs",
+    "size": 891
+  },
+  {
+    "path": "firebase.json",
+    "size": 326
+  },
+  {
+    "path": "postcss.config.mjs",
+    "size": 135
+  },
+  {
+    "path": ".modified",
+    "size": 0
+  },
+  {
+    "path": "components.json",
+    "size": 447
+  },
+  {
+    "path": "package-lock.json",
+    "size": 471989
+  },
+  {
+    "path": "package.json",
+    "size": 2146
+  },
+  {
+    "path": "public/index.html",
+    "size": 318
+  },
+  {
+    "path": "docs/website-copy.md",
+    "size": 9632
+  },
+  {
+    "path": "docs/blueprint.md",
+    "size": 959
+  },
+  {
+    "path": ".idx/icon.png",
+    "size": 29490
+  },
+  {
+    "path": ".idx/dev.nix",
+    "size": 1280
+  },
+  {
+    "path": "src/ai/genkit.ts",
+    "size": 236
+  },
+  {
+    "path": "src/ai/dev.ts",
+    "size": 63
+  },
+  {
+    "path": "src/ai/flows/valuvista-flow.ts",
+    "size": 5680
+  },
+  {
+    "path": "src/app/page.tsx",
+    "size": 6596
+  },
+  {
+    "path": "src/app/globals.css",
+    "size": 1798
+  },
+  {
+    "path": "src/app/favicon.ico",
+    "size": 15086
+  },
+  {
+    "path": "src/app/layout.tsx",
+    "size": 1118
+  },
+  {
+    "path": "src/app/renoscope/page.tsx",
+    "size": 6502
+  },
+  {
+    "path": "src/app/contact/page.tsx",
+    "size": 2548
+  },
+  {
+    "path": "src/app/valuvista/page.tsx",
+    "size": 5369
+  },
+  {
+    "path": "src/app/valuvista/app/page.tsx",
+    "size": 2595
+  },
+  {
+    "path": "src/app/about/page.tsx",
+    "size": 5987
+  },
+  {
+    "path": "src/lib/site-images.json",
+    "size": 2553
+  },
+  {
+    "path": "src/lib/utils.ts",
+    "size": 166
+  },
+  {
+    "path": "src/lib/site-images.ts",
+    "size": 204
+  },
+  {
+    "path": "src/lib/validators.ts",
+    "size": 504
+  },
+  {
+    "path": "src/components/contact-form.tsx",
+    "size": 3032
+  },
+  {
+    "path": "src/components/ui/switch.tsx",
+    "size": 1153
+  },
+  {
+    "path": "src/components/ui/checkbox.tsx",
+    "size": 1070
+  },
+  {
+    "path": "src/components/ui/calendar.tsx",
+    "size": 2709
+  },
+  {
+    "path": "src/components/ui/select.tsx",
+    "size": 5629
+  },
+  {
+    "path": "src/components/ui/carousel.tsx",
+    "size": 6224
+  },
+  {
+    "path": "src/components/ui/sheet.tsx",
+    "size": 4281
+  },
+  {
+    "path": "src/components/ui/textarea.tsx",
+    "size": 709
+  },
+  {
+    "path": "src/components/ui/separator.tsx",
+    "size": 770
+  },
+  {
+    "path": "src/components/ui/avatar.tsx",
+    "size": 1419
+  },
+  {
+    "path": "src/components/ui/alert-dialog.tsx",
+    "size": 4434
+  },
+  {
+    "path": "src/components/ui/dialog.tsx",
+    "size": 3848
+  },
+  {
+    "path": "src/components/ui/collapsible.tsx",
+    "size": 329
+  },
+  {
+    "path": "src/components/ui/radio-group.tsx",
+    "size": 1481
+  },
+  {
+    "path": "src/components/ui/dropdown-menu.tsx",
+    "size": 7433
+  },
+  {
+    "path": "src/components/ui/tooltip.tsx",
+    "size": 1159
+  },
+  {
+    "path": "src/components/ui/scroll-area.tsx",
+    "size": 1656
+  },
+  {
+    "path": "src/components/ui/progress.tsx",
+    "size": 791
+  },
+  {
+    "path": "src/components/ui/badge.tsx",
+    "size": 1128
+  },
+  {
+    "path": "src/components/ui/form.tsx",
+    "size": 4120
+  },
+  {
+    "path": "src/components/ui/label.tsx",
+    "size": 724
+  },
+  {
+    "path": "src/components/ui/tabs.tsx",
+    "size": 1897
+  },
+  {
+    "path": "src/components/ui/accordion.tsx",
+    "size": 1991
+  },
+  {
+    "path": "src/components/ui/slider.tsx",
+    "size": 1091
+  },
+  {
+    "path": "src/components/ui/input.tsx",
+    "size": 791
+  },
+  {
+    "path": "src/components/ui/alert.tsx",
+    "size": 1584
+  },
+  {
+    "path": "src/components/ui/table.tsx",
+    "size": 2765
+  },
+  {
+    "path": "src/components/ui/toast.tsx",
+    "size": 4859
+  },
+  {
+    "path": "src/components/ui/card.tsx",
+    "size": 1858
+  },
+  {
+    "path": "src/components/ui/popover.tsx",
+    "size": 1244
+  },
+  {
+    "path": "src/components/ui/menubar.tsx",
+    "size": 8505
+  },
+  {
+    "path": "src/components/ui/chart.tsx",
+    "size": 10479
+  },
+  {
+    "path": "src/components/ui/skeleton.tsx",
+    "size": 261
+  },
+  {
+    "path": "src/components/ui/toaster.tsx",
+    "size": 786
+  },
+  {
+    "path": "src/components/ui/button.tsx",
+    "size": 1901
+  },
+  {
+    "path": "src/components/valuvista/report.tsx",
+    "size": 5618
+  },
+  {
+    "path": "src/components/valuvista/valuation-form.tsx",
+    "size": 4507
+  },
+  {
+    "path": "src/components/layout/header.tsx",
+    "size": 4183
+  },
+  {
+    "path": "src/components/layout/footer.tsx",
+    "size": 2795
+  },
+  {
+    "path": "src/hooks/use-toast.ts",
+    "size": 3948
+  }
+]
