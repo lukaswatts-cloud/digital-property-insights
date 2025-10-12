@@ -1,0 +1,97 @@
+name: Docs & Repo Map (Build & Deploy to GitHub Pages)
+
+on:
+  push:
+    branches: [ main ]
+    # Prevent infinite loop when this workflow commits repo-map files back to main
+    paths-ignore:
+      - 'repo-map.json'
+      - 'docs/repo-map.md'
+  workflow_dispatch:
+
+# Needed to commit repo map back to main AND publish Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# Only one Pages deploy at a time
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate Repo Map (JSON + Markdown)
+        run: |
+          python3 << 'PY'
+          import json
+          from pathlib import Path
+
+          ROOT = Path(".")
+          IGNORE_DIRS = {".git", ".github", "node_modules", "__pycache__"}
+          files = []
+          for p in ROOT.rglob("*"):
+              rel = p.relative_to(ROOT)
+              if any(part in IGNORE_DIRS for part in rel.parts):
+                  continue
+              if p.is_file():
+                  try:
+                      size = p.stat().st_size
+                  except Exception:
+                      size = None
+                  files.append({"path": str(rel), "size": size})
+
+          # Write JSON
+          Path("repo-map.json").write_text(json.dumps(files, indent=2), encoding="utf-8")
+
+          # Write Markdown
+          lines = ["# Repo Map\n", f"Total files: {len(files)}\n\n"]
+          for e in files:
+              size_str = "?" if e["size"] is None else str(e["size"])
+              lines.append(f"- {e['path']} ({size_str} bytes)")
+          Path("docs").mkdir(parents=True, exist_ok=True)
+          Path("docs/repo-map.md").write_text("\n".join(lines), encoding="utf-8")
+          PY
+
+      - name: Commit Repo Map to main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add repo-map.json docs/repo-map.md
+          git commit -m "chore(docs): update repo map" || echo "No changes to commit"
+          git push
+
+      - name: Install MkDocs
+        run: pip install mkdocs mkdocs-material
+
+      - name: Build MkDocs
+        run: mkdocs build --strict
+
+      - name: Add CNAME for custom domain
+        run: echo "docs.digitalpropertyinsights.com.au" > site/CNAME
+
+      - name: Upload artifact for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-22.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
