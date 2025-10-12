@@ -1,20 +1,25 @@
 # Repo Map
 
-Total files: 72
+Total files: 77
 
 
 - tsconfig.json (602 bytes)
 - tailwind.config.js (2955 bytes)
+- docs-and-map.yml (2852 bytes)
 - README.md (1722 bytes)
 - .gitignore (490 bytes)
 - next.config.mjs (891 bytes)
 - firebase.json (326 bytes)
+- index.md (272 bytes)
 - postcss.config.mjs (135 bytes)
+- repo-map.json (4759 bytes)
+- mkdocs.yml (145 bytes)
 - .modified (0 bytes)
 - components.json (447 bytes)
 - package-lock.json (471989 bytes)
 - package.json (2146 bytes)
 - public/index.html (318 bytes)
+- docs/repo-map.md (2914 bytes)
 - docs/website-copy.md (9632 bytes)
 - docs/blueprint.md (959 bytes)
 - .idx/icon.png (29490 bytes)

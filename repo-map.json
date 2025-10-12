@@ -8,6 +8,10 @@
     "size": 2955
   },
   {
+    "path": "docs-and-map.yml",
+    "size": 2852
+  },
+  {
     "path": "README.md",
     "size": 1722
   },
@@ -24,8 +28,20 @@
     "size": 326
   },
   {
+    "path": "index.md",
+    "size": 272
+  },
+  {
     "path": "postcss.config.mjs",
     "size": 135
+  },
+  {
+    "path": "repo-map.json",
+    "size": 4759
+  },
+  {
+    "path": "mkdocs.yml",
+    "size": 145
   },
   {
     "path": ".modified",
@@ -46,6 +62,10 @@
   {
     "path": "public/index.html",
     "size": 318
+  },
+  {
+    "path": "docs/repo-map.md",
+    "size": 2914
   },
   {
     "path": "docs/website-copy.md",
