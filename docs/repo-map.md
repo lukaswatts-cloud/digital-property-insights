@@ -1,6 +1,6 @@
 # Repo Map
 
-Total files: 75
+Total files: 77
 
 
 - tsconfig.json (602 bytes)
@@ -11,13 +11,15 @@ Total files: 75
 - firebase.json (326 bytes)
 - index.md (272 bytes)
 - postcss.config.mjs (135 bytes)
-- repo-map.json (5030 bytes)
+- repo-map.json (4914 bytes)
 - mkdocs.yml (145 bytes)
 - .modified (0 bytes)
 - components.json (447 bytes)
 - package-lock.json (471989 bytes)
 - package.json (2146 bytes)
 - public/index.html (318 bytes)
+- docs/repo-map.md (2991 bytes)
+- docs/index.md (272 bytes)
 - docs/website-copy.md (9632 bytes)
 - docs/blueprint.md (959 bytes)
 - .idx/icon.png (29490 bytes)
