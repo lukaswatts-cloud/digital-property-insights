@@ -1,11 +1,11 @@
 # Repo Map
 
-Total files: 78
+Total files: 81
 
 
-- repo-map.json (5080 bytes)
-- README.md (1722 bytes)
-- .gitignore (490 bytes)
+- repo-map.json (5079 bytes)
+- README.md (2988 bytes)
+- .gitignore (504 bytes)
 - .modified (0 bytes)
 - tsconfig.json (602 bytes)
 - mkdocs.yml (145 bytes)
@@ -14,9 +14,10 @@ Total files: 78
 - DEPLOYMENT.md (225 bytes)
 - index.md (272 bytes)
 - firebase.json (326 bytes)
-- package.json (378 bytes)
-- next.config.mjs (891 bytes)
+- package.json (1828 bytes)
+- next.config.mjs (803 bytes)
 - tailwind.config.js (2955 bytes)
+- .env.example (1415 bytes)
 - package-lock.json (471989 bytes)
 - .idx/dev.nix (1280 bytes)
 - .idx/icon.png (29490 bytes)
@@ -25,6 +26,7 @@ Total files: 78
 - src/app/globals.css (1798 bytes)
 - src/app/favicon.ico (15086 bytes)
 - src/app/layout.tsx (1118 bytes)
+- src/app/api/contact/route.ts (14083 bytes)
 - src/app/renoscope/page.tsx (6502 bytes)
 - src/app/contact/page.tsx (2548 bytes)
 - src/app/valuvista/page.tsx (5369 bytes)
@@ -37,7 +39,7 @@ Total files: 78
 - src/lib/site-images.ts (204 bytes)
 - src/lib/validators.ts (504 bytes)
 - src/lib/utils.ts (166 bytes)
-- src/components/contact-form.tsx (3032 bytes)
+- src/components/contact-form.tsx (3617 bytes)
 - src/components/ui/slider.tsx (1091 bytes)
 - src/components/ui/toast.tsx (4859 bytes)
 - src/components/ui/checkbox.tsx (1070 bytes)
@@ -77,7 +79,8 @@ Total files: 78
 - src/components/layout/header.tsx (4183 bytes)
 - src/components/layout/footer.tsx (2795 bytes)
 - docs/blueprint.md (959 bytes)
+- docs/SECURITY.md (5348 bytes)
 - docs/index.md (272 bytes)
 - docs/website-copy.md (9632 bytes)
-- docs/repo-map.md (3079 bytes)
+- docs/repo-map.md (3078 bytes)
 - public/index.html (318 bytes)

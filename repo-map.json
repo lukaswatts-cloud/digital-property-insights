@@ -1,15 +1,15 @@
 [
   {
     "path": "repo-map.json",
-    "size": 5080
+    "size": 5079
   },
   {
     "path": "README.md",
-    "size": 1722
+    "size": 2988
   },
   {
     "path": ".gitignore",
-    "size": 490
+    "size": 504
   },
   {
     "path": ".modified",
@@ -45,15 +45,19 @@
   },
   {
     "path": "package.json",
-    "size": 378
+    "size": 1828
   },
   {
     "path": "next.config.mjs",
-    "size": 891
+    "size": 803
   },
   {
     "path": "tailwind.config.js",
     "size": 2955
+  },
+  {
+    "path": ".env.example",
+    "size": 1415
   },
   {
     "path": "package-lock.json",
@@ -86,6 +90,10 @@
   {
     "path": "src/app/layout.tsx",
     "size": 1118
+  },
+  {
+    "path": "src/app/api/contact/route.ts",
+    "size": 14083
   },
   {
     "path": "src/app/renoscope/page.tsx",
@@ -137,7 +145,7 @@
   },
   {
     "path": "src/components/contact-form.tsx",
-    "size": 3032
+    "size": 3617
   },
   {
     "path": "src/components/ui/slider.tsx",
@@ -296,6 +304,10 @@
     "size": 959
   },
   {
+    "path": "docs/SECURITY.md",
+    "size": 5348
+  },
+  {
     "path": "docs/index.md",
     "size": 272
   },
@@ -305,7 +317,7 @@
   },
   {
     "path": "docs/repo-map.md",
-    "size": 3079
+    "size": 3078
   },
   {
     "path": "public/index.html",
