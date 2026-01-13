@@ -1,35 +1,28 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   /* config options here */
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'placehold.co',
         port: '',
-        pathname: '/**',
+        pathname: '/600x400/**',
       },
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
         port: '',
-        pathname: '/**',
+        pathname: '/photo-*',
       },
       {
         protocol: 'https',
         hostname: 'picsum.photos',
         port: '',
-        pathname: '/**',
+        pathname: '/200/**',
       },
       {
-        protocol: 'https'
-        ,
+        protocol: 'https',
         hostname: 'i.ibb.co',
         port: '',
         pathname: '/**',
