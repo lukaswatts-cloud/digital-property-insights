@@ -33,13 +33,34 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(data: ContactFormValues) {
-    console.log(data);
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. We'll get back to you shortly.",
-    });
-    form.reset();
+  async function onSubmit(data: ContactFormValues) {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || 'Failed to send message');
+      }
+
+      toast({
+        title: "Message Sent!",
+        description: result.message || "Thanks for reaching out. We'll get back to you shortly.",
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error instanceof Error ? error.message : "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    }
   }
 
   return (
