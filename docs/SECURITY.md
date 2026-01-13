@@ -97,12 +97,25 @@ Consider implementing:
 - Review and update dependencies regularly
 - Check for known vulnerabilities using `npm audit`
 - Keep Next.js, React, and other critical packages up to date
+- **Critical**: Next.js version must be kept up to date due to security vulnerabilities:
+  - Version 14.2.4 has multiple DoS and authorization bypass vulnerabilities
+  - Minimum safe version for 14.x: 14.2.35
+  - Always use the latest stable patch version
+
+### Vulnerability Monitoring
+
+Run regular security checks:
+```bash
+npm audit
+npm audit fix  # Apply automatic fixes
+```
 
 ### Third-Party Libraries
 
 - Vet all third-party libraries before adding
 - Prefer well-maintained packages with active communities
 - Review package permissions and data access
+- Monitor security advisories for all dependencies
 
 ## Firebase Security Rules
 
