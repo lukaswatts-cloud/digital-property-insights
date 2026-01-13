@@ -3,7 +3,7 @@
 Total files: 78
 
 
-- repo-map.json (5026 bytes)
+- repo-map.json (5080 bytes)
 - README.md (1722 bytes)
 - .gitignore (490 bytes)
 - .modified (0 bytes)
@@ -14,7 +14,7 @@ Total files: 78
 - DEPLOYMENT.md (225 bytes)
 - index.md (272 bytes)
 - firebase.json (326 bytes)
-- package.json (2146 bytes)
+- package.json (378 bytes)
 - next.config.mjs (891 bytes)
 - tailwind.config.js (2955 bytes)
 - package-lock.json (471989 bytes)
@@ -79,5 +79,5 @@ Total files: 78
 - docs/blueprint.md (959 bytes)
 - docs/index.md (272 bytes)
 - docs/website-copy.md (9632 bytes)
-- docs/repo-map.md (3051 bytes)
+- docs/repo-map.md (3079 bytes)
 - public/index.html (318 bytes)

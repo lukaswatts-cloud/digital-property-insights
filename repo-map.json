@@ -1,7 +1,7 @@
 [
   {
     "path": "repo-map.json",
-    "size": 5026
+    "size": 5080
   },
   {
     "path": "README.md",
@@ -45,7 +45,7 @@
   },
   {
     "path": "package.json",
-    "size": 2146
+    "size": 378
   },
   {
     "path": "next.config.mjs",
@@ -305,7 +305,7 @@
   },
   {
     "path": "docs/repo-map.md",
-    "size": 3051
+    "size": 3079
   },
   {
     "path": "public/index.html",
