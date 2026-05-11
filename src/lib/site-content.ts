@@ -18,9 +18,9 @@ export interface ProductDefinition {
 export const siteConfig = {
   name: 'Digital Property Insights',
   shortName: 'DPI',
-  tagline: 'Property intelligence products for client-ready advice, analysis, and action.',
+  tagline: 'Property intelligence tools for better valuation, renovation, and investment decisions.',
   mission:
-    'Digital Property Insights turns property strategy into clear, client-facing experiences backed by practical tools.',
+    'Digital Property Insights helps property owners, advisors, and investors make clearer decisions with practical digital tools and sharper market insight.',
   navLinks: [
     { href: '/', label: 'Home' },
     { href: '/products', label: 'Products' },
@@ -52,7 +52,7 @@ export const products: ProductDefinition[] = [
       'Report-style outputs for client conversations',
     ],
     ctaLabel: 'Explore ValuVista',
-    appLabel: 'Open ValuVista Workspace',
+    appLabel: 'Open ValuVista',
     heroImageId: 'valuvista-mockup',
     appStatus: 'Live workspace',
   },
@@ -78,7 +78,7 @@ export const products: ProductDefinition[] = [
       'Future client dashboard foundation',
     ],
     ctaLabel: 'Explore RenoScope',
-    appLabel: 'Open RenoScope Workspace',
+    appLabel: 'Open RenoScope',
     heroImageId: 'renoscope-mockup',
     appStatus: 'Workspace ready',
   },

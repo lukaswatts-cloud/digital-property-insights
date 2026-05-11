@@ -60,7 +60,7 @@ export default function Header() {
 
         <div className="flex items-center justify-end md:flex-1 space-x-4">
           <Button asChild className="hidden md:inline-flex">
-            <Link href="/contact">Book a Strategy Call</Link>
+            <Link href="/contact">Request a Demo</Link>
           </Button>
 
           <div className="md:hidden">
@@ -92,7 +92,7 @@ export default function Header() {
                       <NavLink key={link.href} {...link} isMobile />
                     ))}
                     <Button asChild className="mt-4">
-                        <Link href="/contact">Book a Strategy Call</Link>
+                        <Link href="/contact">Request a Demo</Link>
                     </Button>
                   </nav>
                 </div>

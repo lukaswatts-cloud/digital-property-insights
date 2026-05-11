@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { products } from '@/lib/site-content';
-import { ProductPageTemplate } from '@/components/marketing/product-page-template';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,14 +11,14 @@ export default function ProductsPage() {
       <section className="border-b border-border/60 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.16),_transparent_35%),linear-gradient(180deg,_hsl(var(--background)),_hsl(var(--secondary)))]">
         <div className="container py-20">
           <Badge className="rounded-full bg-primary/10 px-4 py-1 text-primary hover:bg-primary/10">
-            DPI Product Hub
+            DPI Products
           </Badge>
           <div className="mt-6 max-w-4xl space-y-5">
             <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
-              One website foundation. Multiple client-facing product surfaces.
+              Explore the current Digital Property Insights product suite.
             </h1>
             <p className="max-w-3xl text-lg leading-8 text-muted-foreground">
-              Each Digital Property Insights product starts with a polished public page, then grows into a matching workspace when the workflow is ready.
+              Each product page explains what the tool does, who it helps, and how to take the next step as products become available.
             </p>
           </div>
         </div>

@@ -8,18 +8,18 @@ import { Badge } from '@/components/ui/badge';
 const pillars = [
   {
     icon: <Building2 className="h-5 w-5 text-primary" />,
-    title: 'Public-facing trust layer',
-    description: 'A stable website that explains the brand, the offer, and the products in a client-friendly way.',
+    title: 'Clearer property decisions',
+    description: 'Use purpose-built digital tools to move from uncertainty to clear next steps on value, scope, and strategy.',
   },
   {
     icon: <ChartNoAxesCombined className="h-5 w-5 text-primary" />,
-    title: 'Product-by-product growth',
-    description: 'Each new product can launch with its own page first, then graduate into a working app experience.',
+    title: 'Practical intelligence',
+    description: 'Bring together valuation thinking, renovation planning, and market insight in one connected environment.',
   },
   {
     icon: <Compass className="h-5 w-5 text-primary" />,
-    title: 'Clear control model',
-    description: 'One domain, one visual system, and a cleaner split between marketing pages and operational workspaces.',
+    title: 'Products that keep growing',
+    description: 'Each released app gets a supporting product presence so clients can understand what it does and how to use it.',
   },
 ];
 
@@ -29,15 +29,15 @@ export default function Home() {
       <section className="relative overflow-hidden border-b border-border/60 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.18),_transparent_34%),linear-gradient(180deg,_hsl(var(--background)),_hsl(var(--secondary)))]">
         <div className="container py-24">
           <Badge className="rounded-full bg-primary/10 px-4 py-1 text-primary hover:bg-primary/10">
-            {siteConfig.shortName} Platform Base
+            Digital Property Insights
           </Badge>
           <div className="mt-7 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
             <div className="space-y-6">
               <h1 className="max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl">
-                Build the website once. Launch future property products from the same foundation.
+                Smarter property decisions, supported by practical digital tools.
               </h1>
               <p className="max-w-3xl text-lg leading-8 text-muted-foreground">
-                {siteConfig.name} is now structured to lead with a strong client-facing website while keeping matching workspaces ready for products like ValuVista and RenoScope.
+                {siteConfig.name} brings together client-facing property products designed to support valuation, renovation planning, and better investment conversations.
               </p>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg" className="rounded-full px-6">
@@ -46,24 +46,24 @@ export default function Home() {
                   </Link>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="rounded-full px-6">
-                  <Link href="/contact">Plan your first client-facing release</Link>
+                  <Link href="/contact">Talk with us</Link>
                 </Button>
               </div>
             </div>
 
             <Card className="overflow-hidden border-border/70 bg-card/90 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.7)]">
               <CardHeader className="border-b border-border/60 bg-secondary/45">
-                <CardTitle className="text-xl">Website-to-workspace pattern</CardTitle>
+                <CardTitle className="text-xl">What Digital Property Insights offers</CardTitle>
               </CardHeader>
               <CardContent className="grid gap-4 p-6 text-sm text-foreground/80">
                 <div className="rounded-2xl border border-border/70 bg-background px-4 py-4">
-                  1. Publish the public product page
+                  1. Property valuation support
                 </div>
                 <div className="rounded-2xl border border-border/70 bg-background px-4 py-4">
-                  2. Keep the brand and UI identical
+                  2. Renovation planning tools
                 </div>
                 <div className="rounded-2xl border border-border/70 bg-background px-4 py-4">
-                  3. Open the product workspace only when the workflow is real
+                  3. Product-led digital experiences as new tools are released
                 </div>
               </CardContent>
             </Card>
@@ -73,9 +73,9 @@ export default function Home() {
 
       <section className="container py-16">
         <div className="max-w-3xl">
-          <p className="text-sm uppercase tracking-[0.24em] text-primary">How DPI should scale</p>
+          <p className="text-sm uppercase tracking-[0.24em] text-primary">Why clients use DPI</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-            The website becomes the base layer for every product you publish.
+            Built to support the real decisions people make around property.
           </h2>
         </div>
         <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -100,11 +100,11 @@ export default function Home() {
           <div className="max-w-2xl">
             <p className="text-sm uppercase tracking-[0.24em] text-primary">Current products</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
-              Today&apos;s pages can become tomorrow&apos;s apps without changing the client experience.
+              Explore the products currently shaping the Digital Property Insights suite.
             </h2>
           </div>
           <Button asChild variant="outline" className="rounded-full">
-            <Link href="/products">View all product pages</Link>
+            <Link href="/products">View all products</Link>
           </Button>
         </div>
 
@@ -147,16 +147,16 @@ export default function Home() {
         <Card className="overflow-hidden border-border/70 bg-[linear-gradient(135deg,rgba(14,165,233,0.08),rgba(15,23,42,0.02))]">
           <CardContent className="flex flex-col gap-6 px-6 py-8 md:flex-row md:items-center md:justify-between md:px-8">
             <div className="max-w-2xl">
-              <p className="text-sm uppercase tracking-[0.24em] text-primary">Next release pattern</p>
+              <p className="text-sm uppercase tracking-[0.24em] text-primary">Work with us</p>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight">
-                For each new app, publish the client page first and attach the workspace second.
+                See what is available now, and stay close to what is released next.
               </h2>
               <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                That keeps the public site calm and trustworthy while giving you room to grow the app side in parallel under the same brand.
+                As Digital Property Insights releases new products, each one will be featured here with the right information, product context, and access path.
               </p>
             </div>
             <Button asChild size="lg" className="rounded-full px-6">
-              <Link href="/contact">Shape the next product launch</Link>
+              <Link href="/contact">Request a conversation</Link>
             </Button>
           </CardContent>
         </Card>

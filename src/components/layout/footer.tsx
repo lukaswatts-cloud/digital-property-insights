@@ -24,7 +24,7 @@ export default function Footer() {
             </p>
             <Button asChild className="rounded-full">
               <Link href="/contact">
-                Start a conversation <ArrowRight className="ml-2 h-4 w-4" />
+                Request a demo <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
@@ -54,10 +54,10 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-muted-foreground">Structure</h4>
+            <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.24em] text-muted-foreground">Focus</h4>
             <div className="space-y-3 text-sm text-muted-foreground">
-              <p>Main website first, product pages second, workspaces in parallel when they are ready.</p>
-              <p>The same brand shell can now support future client-facing tools without splitting the domain experience.</p>
+              <p>Digital Property Insights is focused on practical property products that help clients make better decisions.</p>
+              <p>As new apps are released, they can be featured here with the right product context and support material.</p>
             </div>
           </div>
         </div>
