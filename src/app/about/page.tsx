@@ -37,7 +37,7 @@ export default function AboutPage() {
         <div className="container text-center">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">About Digital Property Insights</h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            We're a team of technologists, data scientists, and real estate experts passionate about bringing clarity and intelligence to the property market.
+            We&apos;re a team of technologists, data scientists, and real estate experts passionate about bringing clarity and intelligence to the property market.
           </p>
         </div>
       </section>
@@ -83,7 +83,7 @@ export default function AboutPage() {
               <CardTitle>Our Vision</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-lg text-muted-foreground">To become the world's most trusted platform for real estate intelligence, driving a more efficient, transparent, and accessible property market.</p>
+              <p className="text-lg text-muted-foreground">To become the world&apos;s most trusted platform for real estate intelligence, driving a more efficient, transparent, and accessible property market.</p>
             </CardContent>
           </Card>
         </div>

@@ -8,22 +8,20 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { SiteImages } from '@/lib/site-images';
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/valuvista', label: 'ValuVista' },
-  { href: '/renoscope', label: 'RenoScope' },
-  { href: '/about', label: 'About Us' },
-  { href: '/contact', label: 'Contact Us' },
-];
+import { siteConfig } from '@/lib/site-content';
 
 const logo = SiteImages.find(img => img.id === 'company-logo');
 
 export default function Header() {
   const pathname = usePathname();
+  const isProductsActive =
+    pathname === '/products' ||
+    pathname.startsWith('/valuvista') ||
+    pathname.startsWith('/renoscope');
 
   const NavLink = ({ href, label, isMobile = false }: { href: string; label: string; isMobile?: boolean }) => {
-    const isActive = pathname === href;
+    const isActive =
+      href === '/products' ? isProductsActive : pathname === href;
     const linkClasses = cn(
       "transition-colors hover:text-primary",
       isActive ? "text-primary font-semibold" : "text-foreground/60",
@@ -50,19 +48,19 @@ export default function Header() {
             {logo && <Image src={logo.imageUrl} alt={logo.description} fill sizes="40px" className="object-contain" />}
           </div>
           <span className="hidden font-bold sm:inline-block">
-            Digital Property Insights
+            {siteConfig.name}
           </span>
         </Link>
         
         <nav className="hidden flex-1 md:flex md:items-center md:justify-center md:gap-6">
-          {navLinks.map((link) => (
+          {siteConfig.navLinks.map((link) => (
             <NavLink key={link.href} {...link} />
           ))}
         </nav>
 
         <div className="flex items-center justify-end md:flex-1 space-x-4">
           <Button asChild className="hidden md:inline-flex">
-            <Link href="/contact">Get a Demo</Link>
+            <Link href="/contact">Book a Strategy Call</Link>
           </Button>
 
           <div className="md:hidden">
@@ -80,7 +78,7 @@ export default function Header() {
                         <div className="relative h-8 w-8">
                             {logo && <Image src={logo.imageUrl} alt={logo.description} fill sizes="32px" className="object-contain" />}
                         </div>
-                        <span className="font-bold">DPI</span>
+                        <span className="font-bold">{siteConfig.shortName}</span>
                      </Link>
                      <SheetClose asChild>
                         <Button variant="ghost" size="icon">
@@ -90,11 +88,11 @@ export default function Header() {
                     </SheetClose>
                   </div>
                   <nav className="flex flex-col gap-4 mt-6">
-                    {navLinks.map((link) => (
+                    {siteConfig.navLinks.map((link) => (
                       <NavLink key={link.href} {...link} isMobile />
                     ))}
                     <Button asChild className="mt-4">
-                        <Link href="/contact">Get a Demo</Link>
+                        <Link href="/contact">Book a Strategy Call</Link>
                     </Button>
                   </nav>
                 </div>

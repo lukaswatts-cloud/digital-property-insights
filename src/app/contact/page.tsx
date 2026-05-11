@@ -8,7 +8,7 @@ export default function ContactPage() {
         <div className="container text-center">
           <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Get in Touch</h1>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            We'd love to hear from you. Whether you have a question about our products, pricing, or anything else, our team is ready to answer all your questions.
+            We&apos;d love to hear from you. Whether you have a question about our products, pricing, or anything else, our team is ready to answer all your questions.
           </p>
         </div>
       </section>

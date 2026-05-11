@@ -1,166 +1,165 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import {
-  ArrowRight,
-  DollarSign,
-  LineChart,
-  Home as HomeIcon,
-  Wrench,
-  BarChart,
-  Star,
-  Users,
-} from 'lucide-react';
+import { ArrowRight, Building2, ChartNoAxesCombined, Compass, Sparkles } from 'lucide-react';
+import { products, siteConfig } from '@/lib/site-content';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { SiteImages } from '@/lib/site-images';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
-const heroImage = SiteImages.find(img => img.id === 'hero-image');
-
-const featureCards = [
+const pillars = [
   {
-    icon: <DollarSign className="h-8 w-8 text-primary" />,
-    title: 'AI-Powered Valuations',
-    description: 'Leverage cutting-edge AI for instant, accurate property valuations with ValuVista.',
-    link: '/valuvista',
+    icon: <Building2 className="h-5 w-5 text-primary" />,
+    title: 'Public-facing trust layer',
+    description: 'A stable website that explains the brand, the offer, and the products in a client-friendly way.',
   },
   {
-    icon: <Wrench className="h-8 w-8 text-primary" />,
-    title: 'Renovation ROI Analysis',
-    description: 'Plan and budget renovations effectively to maximize your return on investment with RenoScope.',
-    link: '/renoscope',
+    icon: <ChartNoAxesCombined className="h-5 w-5 text-primary" />,
+    title: 'Product-by-product growth',
+    description: 'Each new product can launch with its own page first, then graduate into a working app experience.',
   },
   {
-    icon: <LineChart className="h-8 w-8 text-primary" />,
-    title: 'Market Trend Insights',
-    description: 'Stay ahead of the curve with real-time market data and predictive analytics.',
-    link: '#',
-  },
-  {
-    icon: <HomeIcon className="h-8 w-8 text-primary" />,
-    title: 'Comprehensive Property Data',
-    description: 'Access a vast database of property details, historical sales, and neighborhood information.',
-    link: '#',
-  },
-];
-
-const whyChooseUsPoints = [
-  {
-    icon: <BarChart className="h-10 w-10 text-primary" />,
-    title: 'Data-Driven Decisions',
-    description: 'Make informed choices backed by comprehensive data and advanced analytics.',
-  },
-  {
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: 'User-Centric Design',
-    description: 'Our tools are designed to be intuitive and easy to use for professionals and homeowners alike.',
-  },
-  {
-    icon: <Star className="h-10 w-10 text-primary" />,
-    title: 'Unmatched Accuracy',
-    description: 'Rely on our industry-leading AI models for valuations and forecasts you can trust.',
+    icon: <Compass className="h-5 w-5 text-primary" />,
+    title: 'Clear control model',
+    description: 'One domain, one visual system, and a cleaner split between marketing pages and operational workspaces.',
   },
 ];
 
 export default function Home() {
   return (
-    <div className="flex-1">
-      {/* Hero Section */}
-      <section className="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white">
-        {heroImage && (
-          <Image
-            src={heroImage.imageUrl}
-            alt={heroImage.description}
-            fill
-            className="object-cover"
-            priority
-            data-ai-hint={heroImage.imageHint}
-          />
-        )}
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 max-w-4xl px-4">
-          <h1 className="text-4xl font-bold tracking-tight md:text-6xl">
-            Unlock the Future of Real Estate
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-primary-foreground/90">
-            Harness the power of AI for smarter property valuation, investment analysis, and renovation planning.
-          </p>
-          <div className="mt-8 flex justify-center gap-4">
-            <Button size="lg" asChild>
-              <Link href="/#features">Explore Solutions</Link>
-            </Button>
-            <Button size="lg" variant="outline" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-background" asChild>
-              <Link href="/contact">Request a Demo</Link>
-            </Button>
+    <div className="pb-20">
+      <section className="relative overflow-hidden border-b border-border/60 bg-[radial-gradient(circle_at_top_left,_rgba(14,165,233,0.18),_transparent_34%),linear-gradient(180deg,_hsl(var(--background)),_hsl(var(--secondary)))]">
+        <div className="container py-24">
+          <Badge className="rounded-full bg-primary/10 px-4 py-1 text-primary hover:bg-primary/10">
+            {siteConfig.shortName} Platform Base
+          </Badge>
+          <div className="mt-7 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+            <div className="space-y-6">
+              <h1 className="max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl">
+                Build the website once. Launch future property products from the same foundation.
+              </h1>
+              <p className="max-w-3xl text-lg leading-8 text-muted-foreground">
+                {siteConfig.name} is now structured to lead with a strong client-facing website while keeping matching workspaces ready for products like ValuVista and RenoScope.
+              </p>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <Button asChild size="lg" className="rounded-full px-6">
+                  <Link href="/products">
+                    Explore products <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="rounded-full px-6">
+                  <Link href="/contact">Plan your first client-facing release</Link>
+                </Button>
+              </div>
+            </div>
+
+            <Card className="overflow-hidden border-border/70 bg-card/90 shadow-[0_30px_80px_-40px_rgba(15,23,42,0.7)]">
+              <CardHeader className="border-b border-border/60 bg-secondary/45">
+                <CardTitle className="text-xl">Website-to-workspace pattern</CardTitle>
+              </CardHeader>
+              <CardContent className="grid gap-4 p-6 text-sm text-foreground/80">
+                <div className="rounded-2xl border border-border/70 bg-background px-4 py-4">
+                  1. Publish the public product page
+                </div>
+                <div className="rounded-2xl border border-border/70 bg-background px-4 py-4">
+                  2. Keep the brand and UI identical
+                </div>
+                <div className="rounded-2xl border border-border/70 bg-background px-4 py-4">
+                  3. Open the product workspace only when the workflow is real
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-16 md:py-24 bg-secondary">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Your All-in-One Real Estate Intelligence Platform</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              From valuation to renovation, our suite of tools provides the insights you need to succeed.
-            </p>
+      <section className="container py-16">
+        <div className="max-w-3xl">
+          <p className="text-sm uppercase tracking-[0.24em] text-primary">How DPI should scale</p>
+          <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+            The website becomes the base layer for every product you publish.
+          </h2>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {pillars.map((pillar) => (
+            <Card key={pillar.title} className="border-border/70 bg-card/90">
+              <CardHeader className="space-y-4">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary/10">
+                  {pillar.icon}
+                </div>
+                <CardTitle className="text-xl">{pillar.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm leading-7 text-muted-foreground">
+                {pillar.description}
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <section className="container py-10">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <p className="text-sm uppercase tracking-[0.24em] text-primary">Current products</p>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+              Today&apos;s pages can become tomorrow&apos;s apps without changing the client experience.
+            </h2>
           </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {featureCards.map((feature, index) => (
-              <Card key={index} className="flex flex-col">
-                <CardHeader>
-                  {feature.icon}
-                  <CardTitle className="mt-4">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-muted-foreground">{feature.description}</p>
-                </CardContent>
-                <div className="p-6 pt-0">
-                  <Button variant="link" className="p-0 h-auto" asChild>
-                    <Link href={feature.link}>
-                      Learn More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+          <Button asChild variant="outline" className="rounded-full">
+            <Link href="/products">View all product pages</Link>
+          </Button>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {products.map((product) => (
+            <Card key={product.slug} className="border-border/70 bg-card/90">
+              <CardHeader className="space-y-4">
+                <div className="flex items-center justify-between gap-4">
+                  <Badge variant="outline" className="rounded-full">
+                    {product.appStatus}
+                  </Badge>
+                  <Sparkles className="h-4 w-4 text-primary" />
+                </div>
+                <CardTitle className="text-2xl">{product.name}</CardTitle>
+                <p className="text-sm leading-7 text-muted-foreground">{product.summary}</p>
+              </CardHeader>
+              <CardContent className="space-y-5">
+                <div className="flex flex-wrap gap-2">
+                  {product.audience.map((audience) => (
+                    <Badge key={audience} variant="secondary" className="rounded-full">
+                      {audience}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex flex-col gap-3 sm:flex-row">
+                  <Button asChild className="rounded-full">
+                    <Link href={product.href}>{product.ctaLabel}</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="rounded-full">
+                    <Link href={product.appHref}>{product.appLabel}</Link>
                   </Button>
                 </div>
-              </Card>
-            ))}
-          </div>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-16 md:py-24">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Why Digital Property Insights?</h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              We empower you with tools that are not just powerful, but also intelligent and intuitive.
-            </p>
-          </div>
-          <div className="mt-12 grid gap-8 md:grid-cols-3">
-            {whyChooseUsPoints.map((point, index) => (
-              <div key={index} className="text-center">
-                <div className="flex justify-center mb-4">{point.icon}</div>
-                <h3 className="text-xl font-semibold">{point.title}</h3>
-                <p className="mt-2 text-muted-foreground">{point.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="py-16 md:py-24">
-        <div className="container text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">Ready to Elevate Your Real Estate Strategy?</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-            Join thousands of professionals who are making smarter, faster, and more profitable decisions with Digital Property Insights.
-          </p>
-          <div className="mt-8">
-            <Button size="lg" asChild>
-              <Link href="/contact">Get Started Today</Link>
+      <section className="container pt-10">
+        <Card className="overflow-hidden border-border/70 bg-[linear-gradient(135deg,rgba(14,165,233,0.08),rgba(15,23,42,0.02))]">
+          <CardContent className="flex flex-col gap-6 px-6 py-8 md:flex-row md:items-center md:justify-between md:px-8">
+            <div className="max-w-2xl">
+              <p className="text-sm uppercase tracking-[0.24em] text-primary">Next release pattern</p>
+              <h2 className="mt-3 text-2xl font-semibold tracking-tight">
+                For each new app, publish the client page first and attach the workspace second.
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-muted-foreground">
+                That keeps the public site calm and trustworthy while giving you room to grow the app side in parallel under the same brand.
+              </p>
+            </div>
+            <Button asChild size="lg" className="rounded-full px-6">
+              <Link href="/contact">Shape the next product launch</Link>
             </Button>
-          </div>
-        </div>
+          </CardContent>
+        </Card>
       </section>
     </div>
   );
