@@ -1,6 +1,6 @@
 # Repo Map
 
-Total files: 88
+Total files: 89
 
 
 - mkdocs.yml (145 bytes)
@@ -9,7 +9,7 @@ Total files: 88
 - package.json (2423 bytes)
 - .modified (0 bytes)
 - tsconfig.json (602 bytes)
-- .gitignore (504 bytes)
+- .gitignore (516 bytes)
 - DEPLOYMENT.md (225 bytes)
 - README.md (2988 bytes)
 - package-lock.json (604026 bytes)
@@ -25,6 +25,7 @@ Total files: 88
 - docs/repo-map.md (3501 bytes)
 - docs/blueprint.md (959 bytes)
 - docs/website-copy.md (9632 bytes)
+- docs/firebase-review-checkpoint-2026-05-11.md (4439 bytes)
 - docs/index.md (272 bytes)
 - docs/SECURITY.md (5348 bytes)
 - src/ai/dev.ts (63 bytes)

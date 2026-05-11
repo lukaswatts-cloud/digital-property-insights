@@ -25,7 +25,7 @@
   },
   {
     "path": ".gitignore",
-    "size": 504
+    "size": 516
   },
   {
     "path": "DEPLOYMENT.md",
@@ -86,6 +86,10 @@
   {
     "path": "docs/website-copy.md",
     "size": 9632
+  },
+  {
+    "path": "docs/firebase-review-checkpoint-2026-05-11.md",
+    "size": 4439
   },
   {
     "path": "docs/index.md",
