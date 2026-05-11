@@ -4,7 +4,7 @@ Total files: 88
 
 
 - mkdocs.yml (145 bytes)
-- firebase.json (326 bytes)
+- firebase.json (445 bytes)
 - postcss.config.mjs (135 bytes)
 - package.json (2423 bytes)
 - .modified (0 bytes)
@@ -14,7 +14,7 @@ Total files: 88
 - README.md (2988 bytes)
 - package-lock.json (604026 bytes)
 - tsconfig.typecheck.json (158 bytes)
-- repo-map.json (5263 bytes)
+- repo-map.json (5762 bytes)
 - .env.example (1208 bytes)
 - .eslintrc.json (50 bytes)
 - components.json (447 bytes)
@@ -22,7 +22,7 @@ Total files: 88
 - tailwind.config.js (3032 bytes)
 - next.config.mjs (802 bytes)
 - public/index.html (318 bytes)
-- docs/repo-map.md (3184 bytes)
+- docs/repo-map.md (3501 bytes)
 - docs/blueprint.md (959 bytes)
 - docs/website-copy.md (9632 bytes)
 - docs/index.md (272 bytes)

@@ -5,7 +5,7 @@
   },
   {
     "path": "firebase.json",
-    "size": 326
+    "size": 445
   },
   {
     "path": "postcss.config.mjs",
@@ -45,7 +45,7 @@
   },
   {
     "path": "repo-map.json",
-    "size": 5263
+    "size": 5762
   },
   {
     "path": ".env.example",
@@ -77,7 +77,7 @@
   },
   {
     "path": "docs/repo-map.md",
-    "size": 3184
+    "size": 3501
   },
   {
     "path": "docs/blueprint.md",
