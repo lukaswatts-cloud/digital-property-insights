@@ -1,5 +1,17 @@
-
 {
+  "apphosting": [
+    {
+      "backendId": "digital-property-insights",
+      "rootDir": ".",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log"
+      ],
+      "alwaysDeployFromSource": true
+    }
+  ],
   "hosting": {
     "site": "digital-property-insights",
     "public": "public",
@@ -7,14 +19,6 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "apphosting": {
-          "backendId": "digital-property-insights"
-        }
-      }
     ]
   }
 }
